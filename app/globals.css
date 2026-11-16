@@ -1,0 +1,22 @@
+:root {
+    --main-color: #00d776;
+    --font-main: var(--font-plus-jakarta);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+}
+
+.main-content-container {
+    height: 100vh;
+
+    /*padding: 0 min(26.944vh, 15.156vw)*/
+}
+.section {
+    padding: 0 min(30.944vh, 15.156vw);
+}

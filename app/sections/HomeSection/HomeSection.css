@@ -1,0 +1,106 @@
+.home-section {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.home-sections-contents {
+    display: flex;
+    flex-direction: column;
+    gap: min(13.333vh, 7.5vw);
+}
+
+.home-sections-phone-container {
+    position: absolute;
+    top: -0.9%;
+    left:34%;
+    will-change: transform;
+    translate: none;
+    rotate: none;
+    scale: none;
+    transform: translate3d(-24.96px, -0.5333%, 0px);
+}
+
+.home-sections-phone {
+    transform: translate3d(0vw, calc(0px + 0vw), 10px);
+
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+
+.home-section-texts {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: min(9.422vh, 5.3vw);
+    align-items: start;
+
+}
+
+.home-section-texts .left-side {
+    font-size: min(6.172vh, 3.472vw);
+}
+.home-section-texts .left-side span{
+    color: #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: min(2.489vh, 1.4vw);
+}
+
+.home-section-texts .left-side span.line {
+    background-color: rgb(119, 119, 119);
+    display: flex;
+    height: min(0.247vh, 0.139vw);
+    width: min(6.172vh, 3.472vw);
+    border-radius: min(1.234vh, 0.694vw);
+}
+
+.home-section-texts .right-side {
+    font-size: min(2.469vh, 1.389vw);
+    margin-right: 2vw;
+}
+
+.home-section-texts p {
+    margin-top: 0;
+}
+
+.download-now-button-home {
+    width: min(31.852vh, 17.917vw);
+    background-color: rgb(245, 245, 245);
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.download-now-button-home .download-now-text-btn {
+    background-color: rgb(245, 245, 245);
+    border: none;
+    font-size: min(2.469vh, 1.389vw);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border-radius: 100px;
+
+    font-weight: bold;
+}
+
+.download-now-button-home .black-circle-btn {
+    background-color: black;
+    color: #00d776;
+    border-radius: 100px;
+
+    display: flex;
+    height: min(7.408vh, 4.167vw);
+    justify-content: center;
+    align-items: center;
+    width: min(7.408vh, 4.167vw);
+
+    border:none;
+}
+
+

@@ -1,0 +1,30 @@
+.box-outer {
+    width: 100%;
+    border-radius: 100px;
+    position: relative;
+}
+
+.green-black-bg{
+    position: absolute;
+    width: 100%;
+
+    z-index: 2;
+}
+
+.text-content-container{
+    position: absolute;
+    width: 100%;
+
+    z-index: 3;
+    border-radius: 50px;
+
+    color: #00d776;
+    overflow: hidden;
+}
+
+.moose-social-media-text{
+    font-size: min(14.814vh, 8.333vw);
+    font-weight: bold;
+    color: var(--main-color);
+    margin: 0;
+}

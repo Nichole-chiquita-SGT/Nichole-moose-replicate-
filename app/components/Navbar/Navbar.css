@@ -1,0 +1,29 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: min(6.172vh, 3.472vw) !important;
+    padding: 0 min(30.944vh, 15.156vw);
+}
+
+.link-container-navbar {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    height: min(5.186vh, 2.917vw);
+
+    background-color: rgb(245, 245, 245);
+    box-sizing: border-box;
+    border-radius: 100px;
+    margin-inline: min(5.333vh, 3vw);
+
+    padding: 0 2vw;
+
+}
+
+.nav-link {
+    color: rgb(6, 20, 12);
+
+}
