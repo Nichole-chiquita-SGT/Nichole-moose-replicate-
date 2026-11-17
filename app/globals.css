@@ -20,3 +20,11 @@ body {
 .section {
     padding: 0 min(30.944vh, 15.156vw);
 }
+
+
+@media (max-width: 576px) {
+    .section {
+        padding: 0
+    }
+
+}

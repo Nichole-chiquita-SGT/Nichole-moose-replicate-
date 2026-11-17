@@ -1,0 +1,140 @@
+.about-us-section {
+    padding-top: min(12.345vh, 6.944vw);
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+.bubble-images-outer{
+    position: relative;
+    height: 100vh;
+}
+
+.bubble-images-inner {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - min(12.345vh, 6.944vw));
+}
+
+
+.bubble-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    height: min(12.5vh, 26vh);
+    width: min(14vw, 26vw);
+    position: absolute;
+}
+
+.bubble-yellow {
+    background: #ddf657;
+}
+
+.bubble-orange {
+    background: #f6be57;
+    top: 75.6%;
+}
+
+.bubble-green {
+    background: #8ff657;
+    right: 0;
+    top: 13.5%;
+}
+
+.bubble-blue {
+    background: #57a1f6;
+    right: 0;
+    top: 57%;
+}
+
+.bubble-image img {
+    height: min(9.259vh, 5.208vw);
+    width: min(9.259vh, 5.208vw);
+}
+
+.text-contents-container{
+    position: absolute;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.text-contents-container .title-bold{
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: min(6.172vh, 3.472vw);
+    gap: min(1.6vh, .9vw);
+    line-height: 1;
+    margin-top: min(11.2vh, 6.3vw);
+    text-align: center;
+
+}
+
+.text-contents-container .subtext-container {
+    align-items: center;
+    color: #000;
+    display: flex;
+    font-size: min(2.469vh, 1.389vw);
+    gap: min(3.556vh, 2vw);
+    justify-content: center;
+    line-height: 1;
+    margin-block: min(11.378vh, 6.4vw) min(5.867vh, 3.3vw);
+}
+
+.text-contents-container .subtext-container p {
+    margin: 0;
+}
+
+.text-contents-container .subtext-container .white-green-line-1 {
+    background: linear-gradient(-90deg, #289600, transparent 90%);
+    height: min(.37vh, .208vw);
+    width: min(7.408vh, 4.167vw);
+}
+
+.text-contents-container .subtext-container .white-green-line-2 {
+    background: linear-gradient(90deg, #289600, transparent 90%);
+    height: min(.37vh, .208vw);
+    width: min(7.408vh, 4.167vw);
+}
+
+@media (min-width: 1920px) {
+
+}
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+    .bubble-images-inner {
+        position: fixed;
+        display: none
+    }
+}
+
+@media (max-width: 425px) {
+}

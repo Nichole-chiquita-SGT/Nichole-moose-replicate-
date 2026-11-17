@@ -44,16 +44,14 @@ function Intro() {
     }, []);
 
     return (
-        <div className="intro-splash-screen-container">
+        <div id="home" className="intro-splash-screen-container">
             <div className="intro-moose">
                 <div className="intro-content">
 
                     <div className="moose-logo-intro">
-                        <Image
+                        <img
                             src="/moose_logo.png"
                             alt="moose_logo"
-                            width={140}
-                            height={140}
                             className="moose-logo-image"
                         />
                     </div>

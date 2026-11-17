@@ -3,14 +3,15 @@ import "./BlackGreenBoxInfo.css"
 function BlackGreenBoxInfo () {
     return (
         <div className="box-outer">
-            <div>
-                <img src="/green-black-bg.png" alt="green and black bg" className="green-black-bg"/>
-            </div>
+
+            <img src="/green-black-bg.png" alt="green and black bg" className="green-black-bg"/>
 
             <div className="text-content-container">
                 <p className="moose-social-media-text">● MOOSE SOCIAL MEDIA</p>
 
-                <div className="white-gradient-line"></div>
+                <div className="white-line-container">
+                    <img src="/white-line.png"/>
+                </div>
 
                 <p>
                     Connect with Real People and Share Genuine <br/>Moments Without Filters or Editing Tools.

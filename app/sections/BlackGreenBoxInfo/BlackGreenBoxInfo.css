@@ -1,30 +1,24 @@
 .box-outer {
+    position: relative;
+    border-radius: 70px;
+}
+
+.green-black-bg {
     width: 100%;
-    border-radius: 100px;
     position: relative;
 }
 
-.green-black-bg{
+.text-content-container {
     position: absolute;
-    width: 100%;
-
-    z-index: 2;
+    top: 0;
+    color: white;
 }
 
-.text-content-container{
-    position: absolute;
-    width: 100%;
-
-    z-index: 3;
-    border-radius: 50px;
-
+.moose-social-media-text {
     color: #00d776;
-    overflow: hidden;
-}
-
-.moose-social-media-text{
+    display: flex;
     font-size: min(14.814vh, 8.333vw);
-    font-weight: bold;
-    color: var(--main-color);
+    font-weight: 700;
+    white-space: nowrap;
     margin: 0;
 }

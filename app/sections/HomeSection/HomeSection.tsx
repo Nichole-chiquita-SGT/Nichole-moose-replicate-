@@ -1,9 +1,8 @@
 import "./HomeSection.css"
 import Image from "next/image";
 
-import { MdArrowOutward } from "react-icons/md";
-
 import BlackGreenBoxInfo from "@/app/sections/BlackGreenBoxInfo/BlackGreenBoxInfo";
+import DownloadNowBtnWithArrow from "@/app/components/DownloadNowBtnWithArrow";
 
 function HomeSection () {
     return (
@@ -26,10 +25,7 @@ function HomeSection () {
                         </span>
                         </p>
 
-                        <div className="download-now-button-home">
-                            <button className="download-now-text-btn">Download Now</button>
-                            <button className="black-circle-btn"><MdArrowOutward size={45}/></button>
-                        </div>
+                        <DownloadNowBtnWithArrow color="#F5F5F5"/>
                     </div>
 
                     <div className="right-side">
@@ -38,7 +34,9 @@ function HomeSection () {
                 </div>
 
 
-                <BlackGreenBoxInfo/>
+                <div className="black-green-box-outer">
+                    <BlackGreenBoxInfo/>
+                </div>
             </div>
         </section>
     )
