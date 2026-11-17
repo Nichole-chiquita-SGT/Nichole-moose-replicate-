@@ -13,7 +13,7 @@ function DownloadBtnBlack () {
     }
 
     return (
-        <button style={style}>
+        <button style={style} className="download-now-btn">
             Download Now
         </button>
     )

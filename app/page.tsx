@@ -23,7 +23,6 @@ export default function Home() {
               {/*<HomeSection/>*/}
               <AboutUsSection id="about-us"/>
               <KeyFeatures/>
-              <AboutUsSection/>
           </main>
       </>
   );

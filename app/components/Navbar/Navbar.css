@@ -18,9 +18,11 @@
     top: 0;
     right: 0;
     left: 0;
-    height: 28px;
-    background: linear-gradient(to bottom, rgb(255 255 255 / 38%), transparent);
-    backdrop-filter: blur(16px);
+    height: 76px;
+    background: linear-gradient(to bottom, rgb(255 255 255 / 34%), rgb(255 255 255 / 12%) 45%, transparent);
+    backdrop-filter: blur(18px);
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, transparent 100%);
     content: "";
     pointer-events: none;
 }
@@ -55,7 +57,7 @@
     height: min(5.186vh, 2.917vw);
     min-height: 42px;
     margin-inline: min(5.333vh, 3vw);
-    padding: 0 clamp(12px, 1.8vw, 35px);
+    padding: 0;
     border-radius: 100px;
     background-color: #f5f5f5;
     font-size: clamp(16px, 1.15vw, 22px);
@@ -80,9 +82,14 @@
 
 .link-container-navbar a.is-current {
     gap: 14px;
+    padding-inline: clamp(20px, 1.8vw, 35px);
     background-color: #00d776;
     color: #06140c;
     font-weight: 600;
+}
+
+.link-container-navbar a:last-child {
+    padding-right: clamp(20px, 1.8vw, 35px);
 }
 
 .link-container-navbar a.is-current::before {
@@ -99,6 +106,12 @@
     outline-offset: 3px;
 }
 
+.menu-phone-btn button{
+    background-color: black;
+    color: var(--main-color);
+    border: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .link-container-navbar a {
         transition: none;
@@ -112,12 +125,20 @@
 
     .link-container-navbar {
         margin-inline: 3vw;
-        padding-inline: 8px;
+        padding: 0;
         font-size: 15px;
     }
 
     .link-container-navbar a {
         padding-inline: 9px;
+    }
+
+    .link-container-navbar a.is-current {
+        padding-inline: 16px;
+    }
+
+    .link-container-navbar a:last-child {
+        padding-right: 16px;
     }
 }
 
@@ -146,20 +167,44 @@
         height: 48px;
         min-height: 48px;
         margin: 0;
-        padding: 0 6px;
+        padding: 0;
         font-size: 13px;
     }
 
     .link-container-navbar a {
-        padding-inline: 8px;
+        padding-inline: 6px;
     }
 
     .link-container-navbar a.is-current {
         gap: 6px;
+        padding-inline: 12px;
+    }
+
+    .link-container-navbar a:last-child {
+        padding-right: 8px;
     }
 
     .link-container-navbar a.is-current::before {
         width: 6px;
         height: 6px;
     }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .link-container-navbar {
+        display: none
+    }
+
+    .download-now-btn{
+        display: none;
+    }
+
+
+
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+
 }

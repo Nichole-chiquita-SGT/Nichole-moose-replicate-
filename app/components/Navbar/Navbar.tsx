@@ -5,11 +5,13 @@ import "./Navbar.css"
 
 import Link from "next/link";
 import { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
 
 import DownloadBtnBlack from "@/app/components/DownloadBtnBlack";
 
 function Navbar () {
     const [activeLink, setActiveLink] = useState("home");
+    const [menuPhone, setMenuPhone] = useState(false)
 
     const navLinks = [
         { id: "home", label: "Home", href: "#home" },
@@ -21,9 +23,17 @@ function Navbar () {
     return (
         <nav className="navbar-container" aria-label="Main navigation">
 
+
             <Link href="#home" className="navbar-brand" aria-label="Moose home" onClick={() => setActiveLink("home")}>
                 <Image src="/moose-logo-with-text.png" alt="Moose" width={303} height={100} className="moose-logo-nav" priority />
             </Link>
+
+            <div className="menu-phone-btn">
+                <button onClick={() => setMenuPhone(!menuPhone)}>
+                    {menuPhone ?  <FiX/> : <FiMenu/> }
+                </button>
+            </div>
+
 
             <div className="link-container-navbar">
                 {navLinks.map(({ id, label, href }) => (
@@ -38,7 +48,6 @@ function Navbar () {
                     </Link>
                 ))}
             </div>
-
 
             <DownloadBtnBlack/>
         </nav>
