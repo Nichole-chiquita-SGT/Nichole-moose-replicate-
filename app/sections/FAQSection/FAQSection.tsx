@@ -55,10 +55,9 @@ function FAQSection () {
             <div className="questions-box-container">
                 {questionData.map((question, index) => (
                     <div key={index} className={activeQuestion === index ? "question-box active" : "question-box"}>
-                        <div className="question-section">
-                            <p>{question.question}</p>
+                        <div onClick={() => setActiveQuestion(activeQuestion === index ? null : index)} className="question-section">
+                            <p >{question.question}</p>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
-                                 onClick={() => setActiveQuestion(activeQuestion === index ? null : index)}
                                  role="button"
                                  aria-expanded={activeQuestion === index}
                                  aria-label={`Toggle answer: ${question.question}`}
