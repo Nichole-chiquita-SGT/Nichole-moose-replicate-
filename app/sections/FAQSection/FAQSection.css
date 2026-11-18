@@ -1,3 +1,9 @@
+.FAQ-section {
+    display: flex;
+    flex-direction: column;
+    gap: min(4.978vh, 2.8vw);
+}
+
 .questions-box-container{
     border-top: unset;
     display: flex;
@@ -7,15 +13,94 @@
 }
 
 .question-box{
-    align-items: center;
     background: #fff;
     border: min(.123vh, .069vw) solid #00d776;
     border-radius: min(2.469vh, 1.389vw);
     cursor: pointer;
+    padding: 1vw 3.5vw;
+}
+
+.question-box.active{
+    background: #00d77614;
+    border: min(.123vh, .069vw) solid transparent;
+}
+
+.question-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question-section p {
+    font-family: Plus Jakarta Sans, sans-serif;
+    font-optical-sizing: auto;
+    font-size: min(2.469vh, 1.389vw);
+    font-style: normal;
+    font-weight: 600 !important;
+    line-height: 1;
+}
+
+.question-box.active .question-section p,
+.question-box.active .question-section svg {
+    color: var(--main-color);
+}
+
+.question-box.active .question-section p {
+    transform: translatey(-10px);
+    transition: transform .3s;
+}
+
+.question-section svg {
+    height: 2.5em;
+    width: 2.5em;
+    transform: rotate(90deg) ;
+
+    transition: transform .3s;
+}
+.question-box.active .question-section svg {
+    transform: rotate(-90deg)translatex(10px);
+}
+
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.answer {
+    font-family: Plus Jakarta Sans, sans-serif;
+    font-optical-sizing: auto;
+    font-size: min(1.975vh, 1.111vw);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.24;
+}
+
+.question-box .collapse-item {
+    display: flex;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    line-height: 1.7692307692;
+    padding-bottom: 0;
+    transform: translateY(-8px);
+    transition: max-height .4s ease, opacity .25s ease, padding-bottom .4s ease, transform .3s ease;
+}
+
+.question-box.active .collapse-item{
+    max-height: 500px;
+    opacity: 1;
+    padding-bottom: 25px;
+    transform: translateY(0);
+}
+.collapse-item {
     display: flex;
     flex-direction: column;
-    height: min(11.728vh, 6.597vw);
-    justify-content: center;
-    transition: all .1s ease;
+}
+.collapse-item p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.collapse-item img {
     width: 100%;
 }
