@@ -10,6 +10,13 @@
     box-sizing: border-box;
     padding: min(6.172vh, 3.472vw) min(30.944vh, 15.156vw) 0;
     isolation: isolate;
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+}
+
+.navbar-container.navbar-hidden {
+    pointer-events: none;
+    opacity: 0;
 }
 
 .navbar-container::before {
@@ -106,14 +113,43 @@
     outline-offset: 3px;
 }
 
+.menu-phone-btn {
+    display: none;
+}
+
 .menu-phone-btn button{
     background-color: black;
     color: var(--main-color);
     border: none;
+    display: none;
+
+    height: min(5.609vh, 9.972vw);
+    width: min(5.609vh, 9.972vw);
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: min(.781vh, 1.389vw);
+
+    padding: 0;
 }
+
+.line {
+    background-color: #00d776;
+    border-radius: min(1.563vh, 2.778vw);
+    height: min(.313vh, .556vw);
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+    transition: all .3s ease;
+    width: min(2.5vh, 4.444vw);
+}
+
 
 @media (prefers-reduced-motion: reduce) {
     .link-container-navbar a {
+        transition: none;
+    }
+
+    .navbar-container {
         transition: none;
     }
 }
@@ -200,7 +236,60 @@
         display: none;
     }
 
+    .menu-phone-btn {
+        display: block;
+    }
 
+    .menu-phone-btn button{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-container::before {
+        display: none;
+    }
+
+    .navbar-container.menu-phone-active {
+        background-color: var(--main-color);
+        box-sizing: border-box;
+        border-radius: 30px;
+        width: 100%;
+    }
+
+    .navbar-container.menu-phone-active .menu-phone-btn button .line-1{
+        transform: translateY(200%) rotate(45deg);
+        width: min(3.094vh, 5.5vw);
+    }
+    .navbar-container.menu-phone-active .menu-phone-btn button .line-2{
+        display: none
+    }
+    .navbar-container.menu-phone-active .menu-phone-btn button .line-3{
+        transform: translateY(-200%) rotate(-45deg);
+        width: min(3.094vh, 5.5vw);
+    }
+
+    .navbar-container .navbar-brand,
+    .navbar-container .menu-phone-btn{
+        transform: scale(100%);
+
+        transition: transform .5s;
+    }
+
+
+    .navbar-container.menu-phone-active .navbar-brand,
+    .navbar-container.menu-phone-active .menu-phone-btn{
+        transform: scale(95%);
+
+        transition: transform .5s;
+    }
+
+    .navbar-container.menu-phone-active .navbar-brand {
+        transform: translate(10px, 10px);
+    }
+    .navbar-container.menu-phone-active .menu-phone-btn{
+        transform: translate(-10px, 10px);
+    }
 
 }
 

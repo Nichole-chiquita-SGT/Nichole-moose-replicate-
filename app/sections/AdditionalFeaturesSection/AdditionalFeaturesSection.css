@@ -1,0 +1,237 @@
+.additionalFeatures-section {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-inline: auto;
+    width: 100%;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: min(3.022vh, 1.7vw);
+    height: auto;
+    justify-content: center;
+    margin-left: min(-.533vh, -.3vw);
+    margin-top: min(11.022vh, 6.2vw);
+    width: min(123.456vh, 69.444vw);
+}
+
+.additional-features-title {
+    font-family: Plus Jakarta Sans;
+    font-size: min(6.169vh, 3.47vw);
+    font-weight: 600;
+    margin-top: min(10.667vh, 6vw);
+}
+
+.card {
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: min(1.234vh, .694vw);
+    display: flex;
+    font-family: Plus Jakarta Sans;
+    gap: min(2.311vh, 1.3vw);
+    height: min(14.939vh, 8.403vw);
+    width: min(39.136vh, 22.014vw);
+}
+
+.card div:first-child {
+    display: flex;
+    justify-content: end;
+    width: 46%;
+}
+
+.card img {
+    width: 75%;
+}
+
+.card-1 div:first-child {
+    width: 40%;
+}
+
+.card-1 img {
+    width: 70%;
+}
+
+.card .text-con {
+    box-sizing: border-box;
+    padding-right: min(2vh, 2vw);
+}
+
+.card .text-con p:nth-child(1) {
+    margin-bottom: min(1.422vh, .8vw);
+    color: #000;
+    font-family: Plus Jakarta Sans;
+    font-size: min(2.469vh, 1.389vw);
+    font-weight: 600;
+    margin-bottom: min(1.047vh, .589vw);
+
+}
+.card .text-con p:nth-child(2) {
+    color: #777;
+    font-family: Plus Jakarta Sans;
+    font-size: min(1.728vh, .972vw);
+    line-height: min(2.222vh, 1.25vw);
+
+}
+
+.additional-features-phone-container {
+    container-type: inline-size;
+    display: flex;
+    justify-content: center;
+    margin-top: 6.2vw;
+    position: relative;
+    width: min(69.444vw, 100%);
+    aspect-ratio: 1.945 / 1;
+}
+
+.additional-features-phone {
+    inset: 0;
+    position: absolute;
+    width: 100%;
+
+}
+
+.additional-features-phone img {
+    position: absolute;
+    margin-top: -.432%;
+    height: min(61.852vh, 29.167vw);
+    width: 35%;
+    z-index: 100;
+    left: 32%;
+}
+
+.phone-text-con {
+    inset: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.variety-text,
+.features-text {
+    color: #00d776;
+    font-size: 12cqi;
+    font-weight: 600;
+    letter-spacing: .216cqi;
+    position: absolute;
+    top: 10.5%;
+}
+
+.variety-text {
+    top: 10.5%;
+    left: 0;
+}
+
+.features-text {
+    top: 40%;
+    right: 0%;
+}
+
+
+
+@media (max-width: 576px) {
+    .additionalFeatures-section {
+        display: flex;
+        text-align: center;
+        width: 100%;
+    }
+
+    .additional-features-title {
+        font-family: Plus Jakarta Sans;
+        font-size: min(4.687vh, 8.333vw);
+        font-weight: 600;
+        line-height: min(5.938vh, 10.556vw);
+        margin-right: min(.563vh, 1vw);
+        margin-top: min(9.225vh, 16.4vw);
+        text-align: center;
+    }
+
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: min(3.906vh, 6.944vw);
+        height: auto;
+        margin-top: min(14.344vh, 25.5vw);
+        width: min(50vh, 88.889vw);
+    }
+
+    .card {
+        align-items: center;
+        background: #f5f5f5;
+        border-radius: 10px;
+        display: flex;
+        font-family: Plus Jakarta Sans;
+        gap: min(3.094vh, 5.5vw);
+        height: max-content;
+        width: 100%;
+
+        box-sizing: border-box;
+        padding: min(3.094vh, 5.5vw);
+    }
+
+    .card .text-con {
+        text-align: start;
+        padding: 0;
+    }
+
+
+    .card .text-con p:nth-child(1) {
+        font-family: Plus Jakarta Sans;
+        font-size: min(2.5vh, 4.444vw);
+        font-weight: 600;
+        margin-top: 0;
+    }
+    .card .text-con p:nth-child(2) {
+        width: min(28.969vh, 51.5vw);
+        font-family: Plus Jakarta Sans;
+        font-size: min(1.875vh, 3.333vw);
+        line-height: min(2.344vh, 4.167vw);
+        margin-bottom: min(.394vh, .7vw);
+    }
+
+    .card div:first-child {
+        display: flex;
+        justify-content: end;
+        width: 22%;
+    }
+
+    .card img {
+        width: 100%;
+    }
+
+    .card-1 div:first-child {
+        width: 22%;
+    }
+
+    .card-1 img {
+        width: 100%;
+    }
+
+    .additional-features-phone-container {
+        width: 100%;
+        margin-top: min(14.344vh, 25.5vw);
+    }
+
+    .additional-features-phone {
+        width: 100%;
+    }
+
+    .additional-features-phone img {
+        position: absolute;
+        margin-top: min(-.533vh, -.3vw);
+        z-index: 100;
+        width: 100%;
+        left: 0;
+        height: auto;
+    }
+
+    .variety-text,
+    .features-text {
+        display: none;
+    }
+
+}

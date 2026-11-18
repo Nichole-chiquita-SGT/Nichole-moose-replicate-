@@ -42,9 +42,9 @@ function DownloadNowBtnWithArrow ({color} : DownloadNowBtnWithArrowProps) {
     };
 
     return (
-        <div style={style.downloadButton}>
+        <div style={style.downloadButton} className="download-now-btn-with-arrow">
             <button style={style.downloadText}>Download Now</button>
-            <button style={style.blackCircle}><MdArrowOutward size={45}/></button>
+            <button style={style.blackCircle}><MdArrowOutward size={45} className="arrow"/></button>
         </div>
     )
 }

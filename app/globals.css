@@ -14,17 +14,95 @@ body {
 
 .main-content-container {
     height: 100vh;
-
     /*padding: 0 min(26.944vh, 15.156vw)*/
 }
 .section {
+    box-sizing: border-box;
     padding: 0 min(30.944vh, 15.156vw);
 }
 
+.tag-key-features {
+    align-items: center;
+    border: min(.247vh, .139vw) solid #00d776;
+    border-radius: min(12.345vh, 6.944vw);
+    display: flex;
+    gap: min(1.234vh, .694vw);
+    height: min(7.408vh, 4.167vw);
+    justify-content: center;
+    /*width: min(26.544vh, 14.931vw);*/
+    width: max-content;
+    padding: 0 30px;
+}
 
-@media (max-width: 576px) {
+.tag-key-features div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tag-key-features div img{
+    height: min(3.703vh, 2.083vw);
+    width: min(3.703vh, 2.083vw);
+}
+
+.tag-key-features p {
+    color: var(--main-color);
+    font-family: Plus Jakarta Sans;
+    font-size: min(2.469vh, 1.389vw);
+    font-weight: 600;
+}
+
+.text-content-container-key-features {
+    display: flex;
+    flex-direction: column;
+    margin-top: min(4.089vh, 2.3vw);
+}
+
+.text-content-container-key-features p {
+    margin: 0;
+    text-align: center;
+    font-size: min(6.172vh, 3.472vw);
+    font-weight: 600;
+}
+
+.text-content-container-key-features p:nth-child(2n) {
+    color: var(--main-color);
+}
+
+
+@media (max-width: 600px) {
     .section {
-        padding: 0
+        padding: 24px 5vw 0;
+    }
+
+    .download-now-btn-with-arrow {
+        align-items: center !important;
+        border-radius: min(11.719vh, 20.833vw);
+        display: flex;
+        height: min(7.031vh, 12.5vw);
+        justify-content: end;
+        overflow: hidden;
+        transform: scale(1);
+        transition: all .3s ease-in-out;
+        width: min(31.562vh, 56.111vw) !important;
+    }
+
+    .download-now-btn-with-arrow button:first-child {
+        color: #000;
+        display: flex;
+        font-size: min(2.5vh, 4.444vw) !important;
+        line-height: 1;
+    }
+
+    .download-now-btn-with-arrow button:last-child {
+        align-items: center;
+        background: #000;
+        border-radius: 50%;
+        display: flex;
+        height: min(7.031vh, 12.5vw) !important;
+        justify-content: center !important;
+        width: min(7.031vh, 12.5vw) !important;
+
     }
 
 }

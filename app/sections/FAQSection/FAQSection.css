@@ -1,0 +1,21 @@
+.questions-box-container{
+    border-top: unset;
+    display: flex;
+    flex-direction: column;
+    gap: min(3.086vh, 1.736vw);
+    width: 100%;
+}
+
+.question-box{
+    align-items: center;
+    background: #fff;
+    border: min(.123vh, .069vw) solid #00d776;
+    border-radius: min(2.469vh, 1.389vw);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: min(11.728vh, 6.597vw);
+    justify-content: center;
+    transition: all .1s ease;
+    width: 100%;
+}

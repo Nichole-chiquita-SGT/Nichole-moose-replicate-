@@ -1,18 +1,10 @@
 import "./KeyFeatures.css"
+import GreenTag from "@/app/components/GreenTag";
 
 function KeyFeatures () {
     return (
         <section id="key-features" className="section-key-features section">
-            <div className="tag-key-features">
-                <div>
-                    <img src="/green-croun.png"/>
-                </div>
-                <p>Key Features</p>
-            </div>
-            <div className="text-content-container-key-features">
-                <p>Build for Real.</p>
-                <p>Designed for You.</p>
-            </div>
+            <GreenTag imgIcon="green-croun" text="Key Features" title1="Build for Real." title2="Designed for you." flex="" />
             <div className="key-features-grid-container">
                 <div className="grid grid-1">
                     <img src="/key-features-grid/grid1/grid-1-bg.png"/>
@@ -56,6 +48,22 @@ function KeyFeatures () {
 
                 <div className="grid grid-3">
                     <img src="/key-features-grid/grid3/grid-3-bg.png"/>
+
+                    <div className="grid-content content-3">
+                        <div className="grid-text-content">
+                            <p>Connect for Real</p>
+                            <p>Go beyond likes and curated personas. Connect with real people and build genuine relationships based on trust, not illusion.</p>
+                        </div>
+
+                        <div className="grid-3-image-container">
+                           <div className="image-1">
+                               <img src="/key-features-grid/grid3/grid-3-notification.png"/>
+                           </div>
+                            <div className="image-2">
+                                <img src="/key-features-grid/grid3/grid-3-phone.png"/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="grid grid-4">

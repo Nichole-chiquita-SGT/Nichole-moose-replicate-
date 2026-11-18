@@ -5,11 +5,16 @@ import Navbar from "@/app/components/Navbar/Navbar";
 import HomeSection from "@/app/sections/HomeSection/HomeSection";
 import AboutUsSection from "@/app/sections/AboutUsSection/AboutUsSection";
 import KeyFeatures from "@/app/sections/KeyFeatures/KeyFeatures";
+import AdditionalFeaturesSection from "@/app/sections/AdditionalFeaturesSection/AdditionalFeaturesSection";
+import BenefitsSection from "@/app/sections/BenefitsSection/BenefitsSection";
+import FAQSection from "@/app/sections/FAQSection/FAQSection";
+
+import Footer from "@/app/components/Footer/Footer";
 
 export default function Home() {
   return (
       <>
-          {/*<img src="/navbar.png" style={{*/}
+          {/*<img src="/additional-features.png" style={{*/}
           {/*    width: "100%",*/}
           {/*    height: "100%",*/}
           {/*    opacity: 0.5,*/}
@@ -23,7 +28,12 @@ export default function Home() {
               {/*<HomeSection/>*/}
               <AboutUsSection id="about-us"/>
               <KeyFeatures/>
+              <AdditionalFeaturesSection/>
+              <BenefitsSection/>
+              <FAQSection/>
+              <Footer/>
           </main>
+
       </>
   );
 }
