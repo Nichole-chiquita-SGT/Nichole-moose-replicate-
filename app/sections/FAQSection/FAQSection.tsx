@@ -43,7 +43,7 @@ function FAQSection () {
         }
     ]
     return (
-        <section className="FAQ-section section">
+        <section className="FAQ-section section-faq">
             <GreenTag
                 imgIcon="green-question-mark"
                 text="FAQ"

@@ -80,6 +80,7 @@
     color: #555;
     text-decoration: none;
     white-space: nowrap;
+
     transition: color 160ms ease, background-color 160ms ease;
 }
 
@@ -93,6 +94,8 @@
     background-color: #00d776;
     color: #06140c;
     font-weight: 600;
+
+
 }
 
 .link-container-navbar a:last-child {

@@ -4,7 +4,7 @@ import DownloadNowBtnWithArrow from "@/app/components/DownloadNowBtnWithArrow";
 
 function AboutUsSection ({ id }: { id?: string }) {
     return (
-        <section id={id} className="about-us-section section">
+        <section id={id} className="about-us-section section-about-us">
             <div className="bubble-images-outer">
                 <div className="bubble-images-inner">
                     <div className="bubble-image bubble-yellow">

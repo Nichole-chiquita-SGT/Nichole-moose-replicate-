@@ -1,8 +1,103 @@
 .CTA-section {
     width: 100%;
-    margin-top: min(5.867vh, 3.3vw);
+    margin: min(11.734vh, 6.6vw) 0;
+    position: relative;
+}
+
+.cta-bg-container {
+    position: relative;
 }
 
 .CTA-section img {
+    position: absolute;
+    width: 100%;
+}
+
+.content-cta {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: -100%;
+    width: 100%;
+    z-index: 120;
+}
+
+.cta-title {
+    color: #fff;
+    font-family: Plus Jakarta Sans, sans-serif;
+    font-size: min(6.24vh, 3.51vw);
+    font-weight: 400;
+    letter-spacing: min(-.062vh, -.035vw);
+    line-height: 1.24;
+    margin-top: min(10.844vh, 6.1vw);
+    text-align: center;
+}
+
+.cta-title .green-line {
+    color: #00d776;
+}
+
+.cta-white-line {
+    height: min(.533vh, .3vw);
+    margin-top: min(4.444vh, 2.5vw);
+    width: 100%;
+}
+
+.cta-des {
+    color: #00d776;
+    font-family: Plus Jakarta Sans, sans-serif;
+    font-size: min(1.867vh, 1.05vw);
+    letter-spacing: min(.053vh, .03vw);
+    line-height: 1.35;
+    margin-top: min(6.044vh, 3.4vw);
+    text-align: center;
+}
+
+.cta-google-play {
+    cursor: pointer;
+    height: min(6.044vh, 3.4vw);
+    margin-top: min(6.756vh, 3.8vw);
+    scale: .8;
+    transform: translateY(-37%);
+    width: min(21.511vh, 12.1vw);
+    z-index: 2;
+}
+
+.card-container-cta {
+    bottom: -26.4%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 98.2%;
+}
+
+.card-container-cta .card-cta {
+    height: min(37.881vh, 21.308vw);
+    width: min(37.511vh, 21.1vw);
+
+    translate: none;
+    rotate: none;
+    scale: none;
+    opacity: 1;
+    visibility: inherit;
+    transform: translate(0px, 0px);
+
+    background: transparent;
+}
+
+.card-container-cta .fade-mask {
+    mask-image: linear-gradient(180deg, #000, transparent 92%);
+    -webkit-mask-image: -webkit-linear-gradient(270deg, #000, transparent 92%);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+}
+
+
+.card-container-cta img {
+    height: 100%;
     width: 100%;
 }

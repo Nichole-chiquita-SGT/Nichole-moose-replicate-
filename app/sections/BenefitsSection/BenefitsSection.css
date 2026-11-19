@@ -1,3 +1,24 @@
 .benefits-section {
-    margin-top: min(18.667vh, 10.5vw);
+    margin-top: min(28.667vh, 14.5vw);
 }
+
+.benefits-content {
+    display: flex;
+    flex-direction: column;
+    gap: min(11.022vh, 6.2vw);
+    height: 100%;
+    width: min(123.456vh, 69.444vw);
+}
+
+.card-container-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: min(6.172vh, 3.472vw);
+    height: -moz-fit-content;
+    height: fit-content;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform .4s ease-in-out;
+    width: 100%;
+}
+

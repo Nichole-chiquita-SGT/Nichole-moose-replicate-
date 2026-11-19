@@ -14,7 +14,7 @@ import Footer from "@/app/components/Footer/Footer";
 export default function Home() {
   return (
       <>
-          {/*<img src="/additional-features.png" style={{*/}
+          {/*<img src="/grid.png" style={{*/}
           {/*    width: "100%",*/}
           {/*    height: "100%",*/}
           {/*    opacity: 0.5,*/}
@@ -25,7 +25,7 @@ export default function Home() {
 
           <main className="main-content-container">
               <Navbar/>
-              {/*<HomeSection/>*/}
+              <HomeSection/>
               <AboutUsSection id="about-us"/>
               <KeyFeatures/>
               <AdditionalFeaturesSection/>

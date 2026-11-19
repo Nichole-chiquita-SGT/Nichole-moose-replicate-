@@ -1,170 +1,288 @@
 .section-key-features {
+    align-items: center;
     display: flex;
     flex-direction: column;
+    height: min(173.828vh, 97.778vw);
     justify-content: center;
-    align-items: center;
+    max-width: 1920px;
+    width: 100vw;
 }
-
 
 .key-features-grid-container {
-    display: grid;
-    grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-
-    margin-top: min(10.844vh, 6.1vw);
+    flex-wrap: wrap;
     gap: min(2.844vh, 1.6vw);
+    width: min(123.456vh, 69.444vw);
+    height: min(123.211vh, 69.306vw);
+    margin-top: min(10.844vh, 6.1vw);
+    display: flex;
 }
 
-.grid {
+.card-key-features {
+    align-items: center;
+    border-radius: min(3.703vh, 2.083vw);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
     position: relative;
 }
 
-.grid-content {
-    position: absolute;
-    z-index: 100;
-}
-
-.grid img{
-    width: 100%;
+.card-key-features .card-bg {
     height: 100%;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
-.grid-1 {
-    grid-column: span 10;
-
+.card-1-key-features {
+    height: min(60.123vh, 33.819vw);
+    position: relative;
+    width: min(60.123vh, 33.819vw);
 }
 
-.content-1 {
+.card-2-key-features {
+    height: min(60.123vh, 33.819vw);
+    position: relative;
+    width: min(60.123vh, 33.819vw);
+}
+
+.card-3 {
+    height: min(60.123vh, 33.819vw);
+    overflow: hidden;
+    position: relative;
+    width: min(73.333vh, 41.25vw);
+}
+
+.card-4 {
+    align-items: flex-end;
+    background: linear-gradient(to bottom right, #3a5c10, #3d2e08);
+    height: min(60.123vh, 33.819vw);
+    position: relative;
+    width: min(47.161vh, 26.528vw);
+}
+
+.card-content {
     align-items: center;
     display: flex;
     flex-direction: column;
     gap: min(8.178vh, 4.6vw);
     margin-top: min(7.111vh, 4vw);
-    top: 0;
-
-    box-sizing: border-box;
-    padding: min(6vh, 24vw);
+    z-index: 1;
 }
 
-.grid-text-content p:nth-child(1) {
+.card-1-key-features .card-content .line-for-icon {
+    height: min(30.578vh, 17.2vw);
+    position: absolute;
+    top: 9.5%;
+    width: min(39.259vh, 22.083vw);
+}
+
+.card-1-key-features .card-content .icons-container {
+    height: min(37.689vh, 21.2vw);
+    position: absolute;
+    top: 4%;
+    width: min(49.778vh, 28vw);
+}
+
+.card-1-key-features .card-content .icons-container .icons-content {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.card-1-key-features .card-content .icons-container .icons-content .icon {
+    height: min(5.556vh, 3.125vw);
+    position: absolute;
+    width: min(5.556vh, 3.125vw);
+}
+
+.card-1-key-features .card-content .icons-container .icons-content .icon-1 {
+    left: 2.5%;
+    top: 8%;
+}
+.card-1-key-features .card-content .icons-container .icons-content .icon-2 {
+    top: 2%;
+}
+.card-1-key-features .card-content .icons-container .icons-content .icon-3 {
+    right: 2%;
+    top: 5%;
+}
+.card-1-key-features .card-content .icons-container .icons-content .icon-4 {
+    bottom: 4%;
+    left: 2.5%;
+}
+.card-1-key-features .card-content .icons-container .icons-content .icon-5 {
+    bottom: 1%;
+}
+.card-1-key-features .card-content .icons-container .icons-content .icon-6 {
+    bottom: 7%;
+    right: 2%;
+}
+
+.center-img-content {
+    height: min(19.428vh, 10.928vw);
+    width: min(37.036vh, 20.833vw);
+    position: absolute;
+    top: 20%;
+    z-index: 2;
+}
+
+.center-img-content img {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+
+.card-1-key-features .text-container-key-features {
+    position: absolute;
+    margin-bottom: min(1.244vh, .7vw);
+    width: min(47.778vh, 26.875vw);
+    height: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    bottom: -43%;
+    left: 10%;
+    gap: 0px;
+}
+
+.key-features-root .title-card-key-features {
     font-size: min(2.933vh, 1.65vw);
-    margin: 0;
     margin-bottom: min(1.244vh, .7vw);
     font-weight: 600;
 }
 
-.grid-text-content p:nth-child(2) {
-    font-size: min(2.018vh, 1.135vw);
-    line-height: 1.2;
+.key-features-root .des-card-key-features {
     color: #777;
-    margin: 0;
+    font-size: min(2.018vh, 1.135vw);
+    line-height: min(2.489vh, 1.4vw);
+
 }
 
-.grid-2 {
-    grid-column: span 10;
+.card-2-key-features .text-container-key-features {
+    position: absolute;
+    margin-bottom: min(1.244vh, .7vw);
+    width: min(47.778vh, 26.875vw);
+    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    gap:min(10.667vh, 6vw);
+    left: 10%;
+    top: -7%;
+    gap: 0px;
+}
 
+.card-2-key-features .image-stack-container {
+    position: absolute;
+}
+
+.card-2-key-features .image-stack-container .image-1,
+.card-2-key-features .image-stack-container .image-2,
+.card-2-key-features .image-stack-container .image-3 {
     width: 100%;
 }
 
-.content-2 {
-    padding: min(6vh, 24vw);
-}
-
-.grid-2-image-stack .image-1 {
-    position: absolute;
-    top: 125%;
-    left: 10%;
+.card-2-key-features .image-stack-container1{
+    top: 48%;
     width: 80%;
     z-index: 100;
 }
 
-.grid-2-image-stack .image-2 {
-    position: absolute;
-    top: 155%;
-    left: 18%;
-    width: 62%;
+.card-2-key-features .image-stack-container2{
+    top: 60%;
+    width: 62.5%;
     z-index: 99;
 }
 
-.grid-2-image-stack .image-3 {
-    position: absolute;
-    top: 180%;
-    left: 25%;
-    width: 49.5%;
+.card-2-key-features .image-stack-container3{
+    top: 71%;
+    width: 50%;
     z-index: 98;
 }
 
-.grid-2-image-stack img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-
-.grid-3 {
-    grid-column: span 12;
-}
-
-.content-3 {
-    padding: min(6vh, 24vw);
-    top: 0;
-    height: max-content;
-    overflow: hidden;
-}
-
-.content-3 .grid-text-content {
-    width: 45%;
-}
-
-
-.grid-3-image-container .image-1 {
+.card-3 .image-stack-container {
     position: absolute;
-    top: 108%;
+}
+
+.card-3 .text-container-key-features {
+    position: absolute;
+    margin-bottom: min(1.244vh, .7vw);
+    width: 40%;
+    height: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    left: 8%;
+    top: -7%;
+    gap: 0px;
+}
+.card-3 .image-stack-container .image-1 {
+    width: 100%;
+}
+.card-3 .image-stack-container .image-2 {
+    width: 100%;
+}
+
+
+.card-3 .image-stack-container1{
+    top: 51%;
     left: 32%;
     width: 57%;
     z-index: 100;
-    transform: rotate(16deg);
+    rotate: 15.5deg;
 }
 
-.grid-3-image-container .image-2 {
-    position: absolute;
-    top: 15%;
+.card-3 .image-stack-container2{
+    top: 6%;
     left: 42%;
     width: 45%;
     z-index: 99;
-    transform: rotate(16deg);
+    rotate: 15.5deg;
 }
 
-.grid-3-image-container img {
-    display: block;
-    width: 100%;
+.card-4 .image-stack-container {
+    position: absolute;
+    top: 9%;
+    left: 37%;
+    width: 52%;
+}
+
+.card-4 .image-stack-container img{
+    width: 100%
+}
+
+.card-4 .text-container-key-features {
+    position: absolute;
+    margin-bottom: min(1.244vh, .7vw);
+    width: min(30.778vh, 20.875vw);
+    height: 100%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    left: 10%;
+    top: 58%;
+    gap: 0px;
 }
 
-
-.grid-4 {
-    grid-column: span 8;
+.card-4 .text-container-key-features .title-key-features{
+    color: #fff;
+    font-size: min(3.703vh, 2.083vw);
+    margin-bottom: min(1.244vh, .7vw);
+    font-weight: 600;
 }
 
-
-
-
-@media (max-width: 576px) {
-    .key-features-grid-container {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .grid {
-        width: 100%;
-        grid-column: span 20;
-    }
-
-    .grid img {
-        width: 100%;
-    }
-
+.card-4 .text-container-key-features .download-now-btn-key-features {
+    background: #00d776;
+    border-radius: min(12.345vh, 6.944vw);
+    color: #000;
+    font-family: Plus Jakarta Sans;
+    font-size: min(1.975vh, 1.111vw);
+    font-weight: 600;
+    height: min(5.186vh, 2.917vw);
+    width: min(19.63vh, 11.042vw);
+    border: none;
 }
