@@ -25,12 +25,12 @@ export default function Home() {
 
           <main className="main-content-container">
               <Navbar/>
-              <HomeSection/>
+              <HomeSection id="home"/>
               <AboutUsSection id="about-us"/>
-              <KeyFeatures/>
+              <KeyFeatures id="key-features"/>
               <AdditionalFeaturesSection/>
               <BenefitsSection/>
-              <FAQSection/>
+              <FAQSection id="faq"/>
               <CTASection/>
               <Footer/>
           </main>

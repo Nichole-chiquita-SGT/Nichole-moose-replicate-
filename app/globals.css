@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --main-color: #00d776;
     --font-main: var(--font-plus-jakarta);
@@ -19,13 +23,14 @@ body {
 .home-section,
 .about-us-section,
 .key-features-root,
-.additionalFeatures-section,
+.additionalFeatures-section-additional-features,
 .benefits-section,
 .FAQ-section,
 .CTA-section,
 .footer-section {
     box-sizing: border-box;
-    padding: 0 min(30.944vh, 15.156vw);
+    /*padding: 0 min(30.944vh, 15.156vw);*/
+    padding: 0 min(38.5vh, 20vw);
 }
 
 .tag-key-features {
@@ -81,7 +86,7 @@ body {
     .home-section,
     .about-us-section,
 .key-features-root,
-    .additionalFeatures-section,
+    .additionalFeatures-section-additional-features,
     .benefits-section,
     .FAQ-section,
     .CTA-section,

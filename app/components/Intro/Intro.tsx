@@ -44,7 +44,7 @@ function Intro() {
     }, []);
 
     return (
-        <div id="home" className="intro-splash-screen-container">
+        <div id="intro-splash-screen" className="intro-splash-screen-container">
             <div className="intro-moose">
                 <div className="intro-content">
 

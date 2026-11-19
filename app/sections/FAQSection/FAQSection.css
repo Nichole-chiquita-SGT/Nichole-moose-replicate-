@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
     gap: min(4.978vh, 2.8vw);
+
+    margin-top: min(7.467vh, 4.2vw);
+    padding-top: min(17.225vh, 9.689vw);
 }
 
 .questions-box-container{

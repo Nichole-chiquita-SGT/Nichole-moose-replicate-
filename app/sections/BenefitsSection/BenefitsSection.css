@@ -22,3 +22,106 @@
     width: 100%;
 }
 
+.benefits-card {
+    align-items: center;
+    border-radius: min(3.703vh, 2.083vw);
+    display: flex;
+    height: min(58.025vh, 32.639vw);
+    justify-content: center;
+    overflow: hidden;
+    transform-origin: top center;
+    transition: all .05s linear;
+    width: 100%;
+}
+
+.benefits-card-bg {
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%;
+}
+
+.benefits-card-content {
+    display: flex;
+    gap: min(6.172vh, 3.472vw);
+    position: absolute;
+    z-index: 1;
+}
+
+.benefits-image-container {
+    background-color: gray;
+    border-radius: min(2.469vh, 1.389vw);
+    height: min(45.678vh, 25.694vw);
+    overflow: hidden;
+    width: min(45.678vh, 25.694vw);
+}
+
+.benefits-image-container img {
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%;
+}
+
+.text-container-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: min(8.356vh, 4.7vw);
+    justify-content: center;
+    margin-top: min(-.711vh, -.4vw);
+    max-width: min(59.022vh, 33.2vw);
+}
+
+.benefits-top-content {
+    display: flex;
+    flex-direction: column;
+    gap: min(2.311vh, 1.3vw);
+}
+
+.benefits-card-title {
+    color: #000;
+    font-size: min(3.703vh, 2.083vw);
+    line-height: 1.25;
+    font-weight: 600 !important;
+}
+
+.benefits-card-description {
+    color: #777;
+    font-size: min(1.975vh, 1.111vw);
+    line-height: 1.24;
+}
+
+.benefits-bottom-content {
+    display: flex;
+    flex-direction: column;
+    gap: min(2.133vh, 1.2vw);
+}
+
+.benefits-highlight {
+    align-items: center;
+    display: flex;
+    gap: min(2.469vh, 1.389vw);
+}
+
+.benefits-arrow-circle {
+    align-items: center;
+    background-color: #00d776;
+    border-radius: 50%;
+    display: flex;
+    height: min(3.703vh, 2.083vw);
+    justify-content: center;
+    width: min(3.703vh, 2.083vw);
+}
+
+.benefits-arrow-circle img {
+    height: min(1.234vh, .694vw);
+    width: min(1.234vh, .694vw);
+}
+
+.benefits-highlight p {
+    color: #000;
+    font-size: min(2.469vh, 1.389vw);
+    line-height: 1.1;
+    font-weight: 400;
+    margin: 0;
+}

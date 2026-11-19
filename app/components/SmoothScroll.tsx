@@ -15,6 +15,7 @@ function SmoothScroll() {
             smoothWheel: true,
             wheelMultiplier: 1,
             touchMultiplier: 2,
+            anchors: true,
         });
 
         lenis.on("scroll", ScrollTrigger.update);

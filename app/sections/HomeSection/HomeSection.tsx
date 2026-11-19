@@ -2,9 +2,9 @@ import "./HomeSection.css"
 
 import DownloadNowBtnWithArrow from "@/app/components/DownloadNowBtnWithArrow";
 
-function HomeSection () {
+function HomeSection ({ id }: { id?: string }) {
     return (
-        <section className="home-section section-home">
+        <section id={id}  className="home-section section-home ">
             <div className="text-container-home">
                 <div className="left-container">
                     <div className="left-text">

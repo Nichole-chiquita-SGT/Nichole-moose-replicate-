@@ -2,8 +2,8 @@ import "./AdditionalFeaturesSection.css"
 
 function AdditionalFeaturesSection() {
     return (
-        <section className="additionalFeatures-section section-additional-features">
-            <div className="additionalFeatures-content-container">
+        <section className="additionalFeatures-section-additional-features section-additional-features">
+            <div className="additionalFeatures-content-container-additional-features">
                 <div className="title-additional-features">
                     <span>...and </span>
                     <span>more </span>
@@ -13,7 +13,7 @@ function AdditionalFeaturesSection() {
 
                 <div className="card-container-additional-features">
                     <div className="card-1-additional-features card-additional-features">
-                        <div className="img-container">
+                        <div className="img-container-additional-features">
                             <img src="/additional-features/conversation.png"/>
                         </div>
 
@@ -29,7 +29,7 @@ function AdditionalFeaturesSection() {
                         </div>
                     </div>
                     <div className="card-2-additional-features card-additional-features">
-                        <div className="img-container">
+                        <div className="img-container-additional-features">
                             <img src="/additional-features/save-always-there.png"/>
                         </div>
 
@@ -43,7 +43,7 @@ function AdditionalFeaturesSection() {
                         </div>
                     </div>
                     <div className="card-3-additional-features card-additional-features">
-                        <div className="img-container">
+                        <div className="img-container-additional-features">
                             <img src="/additional-features/shild.png"/>
                         </div>
 
@@ -57,7 +57,7 @@ function AdditionalFeaturesSection() {
                         </div>
                     </div>
                     <div className="card-4-additional-features card-additional-features">
-                        <div className="img-container">
+                        <div className="img-container-additional-features">
                             <img src="/additional-features/verified.png"/>
                         </div>
 
@@ -71,7 +71,7 @@ function AdditionalFeaturesSection() {
                         </div>
                     </div>
                     <div className="card-5-additional-features card-additional-features">
-                        <div className="img-container">
+                        <div className="img-container-additional-features">
                             <img src="/additional-features/real-people-location.png"/>
                         </div>
 
@@ -87,10 +87,10 @@ function AdditionalFeaturesSection() {
                 </div>
 
                 <div className="phone-container-additional-feature">
-                    <div className="variety-text">
+                    <div className="variety-text-additional-features">
                         VARIETY
                     </div>
-                    <div className="features-text">
+                    <div className="features-text-additional-features">
                         FEATURES
                     </div>
                     <img src="/additional-features/phone-moose.png" className="phone-additional-features"/>

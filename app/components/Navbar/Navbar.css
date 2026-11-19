@@ -8,7 +8,7 @@
     justify-content: space-between;
     width: 100%;
     box-sizing: border-box;
-    padding: min(6.172vh, 3.472vw) min(30.944vh, 15.156vw) 0;
+    padding: min(6.172vh, 3.472vw) min(38.5vh, 20vw) 0;
     isolation: isolate;
     opacity: 1;
     transition: opacity 500ms ease-in-out;
@@ -35,8 +35,10 @@
 }
 
 
+#home,
 #about-us,
-#key-features {
+#key-features,
+#faq {
     scroll-margin-top: 130px;
 }
 

@@ -5,7 +5,7 @@ import GreenTag from "@/app/components/GreenTag";
 
 import {useState} from "react";
 
-function FAQSection () {
+function FAQSection ({ id }: { id?: string }) {
     const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
 
     const questionData = [
@@ -43,7 +43,7 @@ function FAQSection () {
         }
     ]
     return (
-        <section className="FAQ-section section-faq">
+        <section id={id}  className="FAQ-section section-faq">
             <GreenTag
                 imgIcon="green-question-mark"
                 text="FAQ"

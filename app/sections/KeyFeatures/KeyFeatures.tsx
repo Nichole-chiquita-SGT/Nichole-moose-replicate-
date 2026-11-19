@@ -1,9 +1,9 @@
 import "./KeyFeatures.css"
 import GreenTag from "@/app/components/GreenTag";
 
-function KeyFeatures () {
+function KeyFeatures ({ id }: { id?: string }) {
     return (
-        <section id="key-features" className="key-features-root section-key-features">
+        <section id={id}  className="key-features-root section-key-features">
             <GreenTag
                 imgIcon="green-croun"
                 text="Key Features"

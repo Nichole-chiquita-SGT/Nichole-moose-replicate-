@@ -37,11 +37,6 @@ function AboutUsSection ({ id }: { id?: string }) {
                     <DownloadNowBtnWithArrow color="#00D776" />
                 </div>
             </div>
-
-
-
-
-
         </section>
     )
 }
