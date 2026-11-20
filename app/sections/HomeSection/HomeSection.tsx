@@ -47,34 +47,58 @@ function HomeSection ({ id }: { id?: string }) {
 
     return (
         <section ref={sectionRef} id={id ?? "home"} className="home-section section section-home">
-            <div className="text-container-home">
-                <div className="left-container">
-                    <div className="left-text">
-                        Start sharing
-                        <br/>
-                        real moments
-                        <br/>
-                        <span className="highlight">
+            <div className="content-desktop">
+                <div className="text-container-home">
+                    <div className="left-container">
+                        <div className="left-text">
+                            Start sharing
+                            <br/>
+                            real moments
+                            <br/>
+                            <span className="highlight">
                             <span className="gray-line"></span>
                             With Moose
                         </span>
+                        </div>
+
+                        <DownloadNowBtnWithArrow color="#F5F5F5"/>
                     </div>
 
-                    <DownloadNowBtnWithArrow color="#F5F5F5"/>
-                </div>
-
-                <div className="image-container">
-                    <img src="/phone-home-section.png" alt="Moose app displayed on a phone"/>
-                </div>
-
-                <div className="right-container">
-                    <div className="text-right">
-                        Discover the
-                        <br/>
-                        Social Media App That
-                        <br/>
-                        Values Authenticity
+                    <div className="image-container">
+                        <img src="/phone-home-section.png" alt="Moose app displayed on a phone"/>
                     </div>
+
+                    <div className="right-container">
+                        <div className="text-right">
+                            Discover the
+                            <br/>
+                            Social Media App That
+                            <br/>
+                            Values Authenticity
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="content-mobile">
+                <div className="top-content-mb">
+                    <div className="title-home-mb">
+                        Start Sharing
+                        <br />
+                        Real Moments
+                        <br />
+                        With Moose
+                    </div>
+                    <DownloadNowBtnWithArrow color="#F5F5F5" />
+                </div>
+                <div className="icon-moose-mb">
+                    <img src="/icon-moose-trasparant.png" alt="Moose" />
+                </div>
+                <div className="mobile-home-heading">
+                    Discover the Social Media App<br />That Values Authenticity
+                </div>
+                <div className="image-container-mobile">
+                    <img src="/phone-home-section.png" alt="Moose app displayed on a phone" />
                 </div>
             </div>
 

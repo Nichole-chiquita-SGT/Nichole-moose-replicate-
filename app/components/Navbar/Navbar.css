@@ -181,40 +181,69 @@
 }
 
 .nav-links-bar .link.active {
-    background-color: rgb(0, 215, 118);
-    color: rgb(6, 20, 12);
+    background-color: var(--main-color);
+    color: #063820;
     font-weight: 600;
     height: 100%;
+}
+
+.nav-links-bar .link.active .nav-link-text-replace {
+    color: #063820;
+    opacity: 1;
+}
+
+.nav-links-bar .link.active .nav-link-text-con {
+    opacity: 0;
 }
 
 .dot {
     left: 0px;
     margin-right: min(1.234vh, 0.694vw);
-    transform: scale(0);
+    transform: scaleX(0);
     transform-origin: left center;
     width: fit-content;
-    transition: 0.5s;
+    transition: transform 0.5s ease, color 0.5s ease;
 }
 
 .dot.active {
-    transform: scale(1);
+    color: #063820;
+    transform: scaleX(1);
+}
+
+.nav-links-bar .link:not(.active):hover .dot {
+    color: #00b864;
+    transform: scaleX(1);
 }
 
 .nav-link-text-con {
-    align-self: start;
     display: flex;
+    height: min(2.844vh, 1.6vw);
+    overflow: hidden;
+    white-space: pre;
+}
+
+.nav-letter {
+    display: flex;
+    flex: 0 0 auto;
     flex-direction: column;
     height: 100%;
-    margin-top: min(0.622vh, 0.35vw);
-    transform: translateY(0px);
-    gap: min(0.178vh, 0.1vw);
-
+    transition: transform 0.35s ease-in-out;
 }
 
 .nav-text {
     align-items: center;
     display: flex;
+    flex: 0 0 100%;
     height: min(2.844vh, 1.6vw);
+    transition: color 0.5s ease;
+}
+
+.nav-links-bar .link:not(.active):hover .nav-text {
+    color: #00b864;
+}
+
+.nav-links-bar .link:not(.active):hover .nav-letter {
+    transform: translateY(-100%);
 }
 
 .nav-link-text-replace {
@@ -228,6 +257,202 @@
     color: rgb(6, 20, 12);
     position: absolute;
     right: min(3.086vh, 1.736vw);
+}
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+.nav-download-btn-mobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .navbar-container {
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 0;
+        position: sticky;
+        top: 0;
+        width: 100%;
+    }
+
+    .navbar-container.menu-open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .blur-bg-nav {
+        display: none;
+    }
+
+    .navbar-inner {
+        align-items: center;
+        box-sizing: border-box;
+        justify-content: space-between;
+        padding: clamp(18px, 5vw, 32px);
+        position: relative;
+        width: 100%;
+    }
+
+    .nav-logo-container {
+        position: relative;
+        height: min(6.679vh, 11.874vw);
+        transition: transform .3s ease;
+        width: min(20.213vh, 35.935vw);
+        z-index: 1202;
+    }
+
+    .navbar-container.menu-open .nav-logo-container {
+        transform: translate(10%, 25%);
+    }
+
+    .nav-logo-container img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+    .mobile-menu-toggle {
+        align-items: center;
+        background-color: #000;
+        border: 0;
+        border-radius: 50%;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        gap: min(.781vh, 1.389vw);
+        height: min(5.609vh, 9.972vw);
+        justify-content: center;
+        position: fixed;
+        right: clamp(18px, 5vw, 32px);
+        top: clamp(18px, 5vw, 32px);
+        width: min(5.609vh, 9.972vw);
+        z-index: 1203;
+
+        transition: transform .3s ease, background-color .3s ease;
+    }
+
+    .mobile-menu-toggle span {
+        background-color: #00d776;
+        border-radius: min(1.563vh, 2.778vw);
+        height: min(.313vh, .556vw);
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+        transition: all .3s ease;
+        width: min(2.5vh, 4.444vw);
+    }
+
+    .mobile-menu-toggle.open {
+        position: fixed;
+
+        transform: translate(-25%, 25%);
+    }
+
+    .mobile-menu-toggle.open span:first-child {
+        width: min(3.094vh, 5.5vw);
+        transform: translateY(350%) rotate(45deg);
+    }
+
+    .mobile-menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.open span:last-child {
+        width: min(3.094vh, 5.5vw);
+        transform: translateY(-350%) rotate(-45deg);
+    }
+
+    .nav-links-bar {
+        align-items: center;
+        background: var(--main-color);
+        border-radius: min(3.125vh, 5.556vw);
+        display: flex;
+        flex-direction: column;
+        gap: min(1.969vh, 3.5vw);
+        height: auto;
+        justify-content: center;
+        left: 12px;
+        margin: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 120px 24px 120px;
+        pointer-events: none;
+        position: fixed;
+        right: 12px;
+        top: 12px;
+        transform: scale(0.98);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+        visibility: hidden;
+        width: auto;
+        z-index: 1201;
+    }
+
+    .nav-links-bar.menu-open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: scale(1);
+        visibility: visible;
+
+
+    }
+
+    .nav-links-bar .link,
+    .nav-links-bar .link.active {
+        align-items: center;
+        background: transparent;
+        border-radius: 0;
+        color: #000;
+        display: flex;
+        flex: 0 0 auto;
+        font-size: clamp(24px, 6vw, 38px);
+        font-weight: 400;
+        height: auto;
+        justify-content: center;
+        overflow: visible;
+        padding: 0;
+        width: auto;
+    }
+
+    .nav-links-bar .dot {
+        display: none;
+    }
+
+    .nav-link-text-con {
+        display: none;
+    }
+
+    .nav-link-text-replace,
+    .nav-links-bar .link.active .nav-link-text-replace {
+        color: #000;
+        display: block;
+        font-size: min(2.5vh, 4.444vw);
+        line-height: 1.5;
+        opacity: 1;
+        position: static;
+        right: auto;
+        text-align: center;
+    }
+
+    .nav-download-btn {
+        display: none;
+    }
+
+    .nav-links-bar.menu-open .nav-download-btn-mobile {
+        display: block;
+        bottom: clamp(44px, 7vh, 72px);
+        left: 16px;
+        position: absolute;
+        right: 16px;
+        bottom: 6%;
+    }
+
+    .nav-links-bar.menu-open .nav-download-btn-mobile .download-now-btn {
+        box-sizing: border-box;
+        font-size: clamp(22px, 5.5vw, 36px) !important;
+        height: clamp(54px, 4vh, 60px) !important;
+        width: 100%;
+    }
 }
 
 

@@ -106,3 +106,47 @@
     background: linear-gradient(90deg, rgb(40, 150, 0), transparent 90%);
 }
 
+@media (max-width: 600px) {
+
+    .about-us-section {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .bubble-bg {
+        display: none;
+    }
+
+    .about-us-title {
+        font-size: min(5.555vh, 8.333vw);
+        font-weight: 700;
+        line-height: 1.28;
+        margin-block: min(8.64vh, 18.7vw) min(5.083vh, 11vw);
+    }
+
+    .about-us-content{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: start;
+        position: relative;
+        text-align: center;
+        width: 100vw
+    }
+
+    .white-green-line {
+        display: none;
+    }
+
+    .about-us-sub-title {
+        margin-bottom: min(6.053vh, 13.1vw);;
+    }
+
+    .about-us-sub-title .sub-title{
+        width: 78%;
+        font-size: min(2.963vh, 4.444vw);
+    }
+
+
+}

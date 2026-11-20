@@ -302,3 +302,15 @@
     width: min(19.63vh, 11.042vw);
     border: none;
 }
+
+@media (max-width: 600px) {
+
+    .key-features-grid-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: auto;
+    }
+
+}
