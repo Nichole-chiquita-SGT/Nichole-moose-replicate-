@@ -3,7 +3,7 @@ import DownloadBtnBlack from "@/app/components/DownloadBtnBlack";
 
 function Footer() {
     return (
-        <div className="footer-section section-footer">
+        <div className="footer-section section section-footer">
             <div className="line-con">
                 <img src="/green-line.png"/>
             </div>

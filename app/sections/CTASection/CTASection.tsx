@@ -2,7 +2,7 @@ import "./CTASection.css"
 
 function AboutUsSection(){
     return (
-        <section className="CTA-section section-cta">
+        <section className="CTA-section section section-cta">
             <div className="cta-bg-container">
                 <img src="/bg-cta.png"/>
             </div>

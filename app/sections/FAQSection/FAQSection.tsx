@@ -43,7 +43,7 @@ function FAQSection ({ id }: { id?: string }) {
         }
     ]
     return (
-        <section id={id}  className="FAQ-section section-faq">
+        <section id={id}  className="FAQ-section section section-faq">
             <GreenTag
                 imgIcon="green-question-mark"
                 text="FAQ"

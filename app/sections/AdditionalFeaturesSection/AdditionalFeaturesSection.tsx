@@ -2,7 +2,7 @@ import "./AdditionalFeaturesSection.css"
 
 function AdditionalFeaturesSection() {
     return (
-        <section className="additionalFeatures-section-additional-features section-additional-features">
+        <section className="additionalFeatures-section-additional-features section section-additional-features">
             <div className="additionalFeatures-content-container-additional-features">
                 <div className="title-additional-features">
                     <span>...and </span>

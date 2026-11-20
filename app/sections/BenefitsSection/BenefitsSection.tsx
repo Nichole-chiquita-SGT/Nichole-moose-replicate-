@@ -39,7 +39,7 @@ function BenefitsSection() {
     ]
 
     return (
-        <section className="benefits-section section-benefits">
+        <section className="benefits-section section section-benefits">
             <div className="benefits-content">
                 <GreenTag imgIcon="green-star" text="Benefits"
                           title1="Experience " title2=" Future of Social Media" flex=""/>

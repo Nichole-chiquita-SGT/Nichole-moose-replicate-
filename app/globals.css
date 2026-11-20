@@ -20,17 +20,9 @@ body {
     min-height: 100vh;
     /*padding: 0 min(26.944vh, 15.156vw)*/
 }
-.home-section,
-.about-us-section,
-.key-features-root,
-.additionalFeatures-section-additional-features,
-.benefits-section,
-.FAQ-section,
-.CTA-section,
-.footer-section {
+.section {
     box-sizing: border-box;
-    /*padding: 0 min(30.944vh, 15.156vw);*/
-    padding: 0 min(38.5vh, 20vw);
+    padding: 0 min(30.944vh, 15.156vw);
 }
 
 .tag-key-features {
@@ -83,14 +75,7 @@ body {
 
 
 @media (max-width: 600px) {
-    .home-section,
-    .about-us-section,
-.key-features-root,
-    .additionalFeatures-section-additional-features,
-    .benefits-section,
-    .FAQ-section,
-    .CTA-section,
-    .footer-section {
+    .section {
         padding: 24px 5vw 0;
     }
 
