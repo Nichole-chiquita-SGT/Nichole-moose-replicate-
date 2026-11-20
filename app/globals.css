@@ -18,11 +18,16 @@ body {
 
 .main-content-container {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /*padding: 0 min(26.944vh, 15.156vw)*/
 }
 .section {
     box-sizing: border-box;
-    padding: 0 min(30.944vh, 15.156vw);
+    /*padding: 0 min(30.944vh, 15.156vw);*/
+    position: relative;
+    width: 100vw;
 }
 
 .tag-key-features {

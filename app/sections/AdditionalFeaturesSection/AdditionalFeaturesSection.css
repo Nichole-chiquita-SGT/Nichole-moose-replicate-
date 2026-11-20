@@ -22,6 +22,11 @@
     margin-top: min(15.667vh, 12vw);
 }
 
+.additionalFeatures-content-container-additional-features .title-additional-features span{
+    display: inline-block;
+    margin-right: 0.25em;
+}
+
 .card-container-additional-features {
     display: flex;
     flex-wrap: wrap;

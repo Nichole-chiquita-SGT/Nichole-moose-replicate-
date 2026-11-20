@@ -1,15 +1,36 @@
 .CTA-section {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    margin: min(11.734vh, 6.6vw) 0;
-    position: relative;
+}
+
+.cta-content {
+    display: flex;
+    height: min(79.644vh, 44.8vw);
+    justify-content: center;
+    max-width: 1920px;
+    width: min(177.778vh, 100vw);
+}
+
+.bg-container {
+    height: min(73.6vh, 41.4vw);
+    margin-top: min(5.867vh, 3.3vw);
+    text-align: center;
+    width: min(123.556vh, 69.5vw);
+    border-radius: min(4.089vh, 2.3vw);
+    overflow: hidden;
 }
 
 .cta-bg-container {
+    height: 100%;
+    left: 0px;
     position: relative;
+    top: 0px;
+    width: 100%;
 }
 
-.CTA-section img {
-    position: absolute;
+.cta-bg-container img{
+    height: 100%;
     width: 100%;
 }
 
@@ -21,18 +42,23 @@
     position: relative;
     top: -100%;
     width: 100%;
-    z-index: 120;
+    z-index: 2;
 }
 
 .cta-title {
-    color: #fff;
-    font-family: Plus Jakarta Sans, sans-serif;
+    color: rgb(255, 255, 255);
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-size: min(6.24vh, 3.51vw);
     font-weight: 400;
-    letter-spacing: min(-.062vh, -.035vw);
+    letter-spacing: min(-0.062vh, -0.035vw);
     line-height: 1.24;
     margin-top: min(10.844vh, 6.1vw);
     text-align: center;
+}
+
+.cta-title span {
+    display: inline-block;
+    margin-right: 0.25em;
 }
 
 .cta-title .green-line {
@@ -40,29 +66,33 @@
 }
 
 .cta-white-line {
-    height: min(.533vh, .3vw);
+    height: min(0.533vh, 0.3vw);
     margin-top: min(4.444vh, 2.5vw);
     width: 100%;
 }
 
 .cta-des {
-    color: #00d776;
-    font-family: Plus Jakarta Sans, sans-serif;
+    color: rgb(0, 215, 118);
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-size: min(1.867vh, 1.05vw);
-    letter-spacing: min(.053vh, .03vw);
+    letter-spacing: min(0.053vh, 0.03vw);
     line-height: 1.35;
     margin-top: min(6.044vh, 3.4vw);
-    text-align: center;
 }
 
 .cta-google-play {
     cursor: pointer;
-    height: min(6.044vh, 3.4vw);
+    height: min(5.044vh, 3vw);
     margin-top: min(6.756vh, 3.8vw);
-    scale: .8;
+    scale: 0.8;
     transform: translateY(-37%);
-    width: min(21.511vh, 12.1vw);
+    width: min(17.511vh, 10.1vw);
     z-index: 2;
+}
+
+.cta-google-play img {
+    width: 100%;
+    height: 100%;
 }
 
 .card-container-cta {

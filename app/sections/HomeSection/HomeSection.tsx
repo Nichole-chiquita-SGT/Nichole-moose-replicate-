@@ -1,10 +1,52 @@
+"use client"
+
 import "./HomeSection.css"
 
+import { useRef } from "react";
 import DownloadNowBtnWithArrow from "@/app/components/DownloadNowBtnWithArrow";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 function HomeSection ({ id }: { id?: string }) {
+    const sectionRef = useRef<HTMLElement>(null);
+
+    useGSAP(() => {
+        const section = sectionRef.current;
+        if (!section) return
+
+        const phoneImage = section.querySelector<HTMLElement>(".image-container");
+        if (!phoneImage) return;
+
+        gsap.fromTo(phoneImage, {
+            yPercent: 0
+        }, {
+            yPercent: -20,
+            scrollTrigger: {
+                trigger: section,
+                start: "27.5% center",
+                end: "bottom top",
+                scrub: true,
+            },
+        })
+
+        const xto = gsap.quickTo(phoneImage, "x", { duration: 1.2, ease: "power3.out" });
+        const yto = gsap.quickTo(phoneImage, "y", { duration: 1.2, ease: "power3.out" });
+
+        const follow = (e: MouseEvent) => {
+            const rect = section.getBoundingClientRect()
+            xto(((e.clientX - rect.left) / rect.width - 0.5) * -20)
+            yto(((e.clientY - rect.top) / rect.height - 0.5) * -20)
+        }
+
+        section.addEventListener("mousemove", follow)
+        return () => section.removeEventListener("mousemove", follow)
+    }, { scope: sectionRef });
+
     return (
-        <section id={id}  className="home-section section section-home ">
+        <section ref={sectionRef} id={id ?? "home"} className="home-section section section-home">
             <div className="text-container-home">
                 <div className="left-container">
                     <div className="left-text">
@@ -22,14 +64,14 @@ function HomeSection ({ id }: { id?: string }) {
                 </div>
 
                 <div className="image-container">
-                    <img src="/phone-home-section.png"/>
+                    <img src="/phone-home-section.png" alt="Moose app displayed on a phone"/>
                 </div>
 
                 <div className="right-container">
                     <div className="text-right">
                         Discover the
                         <br/>
-                        Sosial Meida App That
+                        Social Media App That
                         <br/>
                         Values Authenticity
                     </div>

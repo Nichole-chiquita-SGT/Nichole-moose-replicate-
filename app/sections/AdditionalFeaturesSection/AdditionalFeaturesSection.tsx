@@ -1,8 +1,60 @@
+"use client"
+
 import "./AdditionalFeaturesSection.css"
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {useGSAP} from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function AdditionalFeaturesSection() {
+    useGSAP(()=>{
+        const tl = gsap.timeline({
+            scrollTrigger:{
+                trigger: ".additionalFeatures-section-additional-features ",
+                start: "top center",
+                end: "5% center",
+                toggleActions: "play none none reverse"
+            }
+        })
+
+        tl.from(".title-additional-features span", {
+            opacity: 0,
+            y: 20,
+            ease: "power3.out",
+            stagger: 0.1,
+        })
+
+        tl.from(".card-additional-features", {
+            opacity: 0,
+            y: 20,
+            ease: "power3.out",
+            stagger: 0.1,
+        }, "<+=0.1")
+
+        gsap.to(".variety-text-additional-features", {
+            x: -100,
+            scrollTrigger: {
+                trigger: ".additionalFeatures-section-additional-features ",
+                start: "30% center",
+                end: "bottom center",
+                scrub: true,
+
+            }
+        })
+        gsap.to(".features-text-additional-features", {
+            x: 100,
+            scrollTrigger: {
+                trigger: ".additionalFeatures-section-additional-features ",
+                start: "30% center",
+                end: "bottom center",
+                scrub: true,
+
+            }
+        })
+    });
     return (
-        <section className="additionalFeatures-section-additional-features section section-additional-features">
+        <section className="additionalFeatures-section-additional-features section">
             <div className="additionalFeatures-content-container-additional-features">
                 <div className="title-additional-features">
                     <span>...and </span>

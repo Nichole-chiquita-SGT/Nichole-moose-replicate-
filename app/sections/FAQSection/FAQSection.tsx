@@ -4,8 +4,14 @@ import "./FAQSection.css"
 import GreenTag from "@/app/components/GreenTag";
 
 import {useState} from "react";
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {useGSAP} from "@gsap/react";
 
-function FAQSection ({ id }: { id?: string }) {
+gsap.registerPlugin(ScrollTrigger);
+
+
+function FAQSection () {
     const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
 
     const questionData = [
@@ -42,41 +48,59 @@ function FAQSection ({ id }: { id?: string }) {
             answer: "Our dedicated customer support team is always here to assist you. Reach out via the app or on our website for any help you need."
         }
     ]
+
+    useGSAP(()=>{
+        gsap.from(".question-box", {
+            stagger:0.1,
+            opacity: 0,
+            y: 30,
+            scrollTrigger: {
+                trigger: ".FAQ-section",
+                start: "20% center",
+                end: "20% center",
+                toggleActions: "play none none reverse"
+            }
+        })
+    })
     return (
-        <section id={id}  className="FAQ-section section section-faq">
-            <GreenTag
-                imgIcon="green-question-mark"
-                text="FAQ"
-                title1="Frequently Asked"
-                title2="Questions"
-                flex="row"
-            />
+        <section id="faq"  className="FAQ-section section ">
+            <div className="faq-content">
+                <div className="center-content">
+                    <GreenTag
+                        imgIcon="green-question-mark"
+                        text="FAQ"
+                        title1="Frequently Asked"
+                        title2="Questions"
+                        flex="row"
+                    />
 
-            <div className="questions-box-container">
-                {questionData.map((question, index) => (
-                    <div key={index} className={activeQuestion === index ? "question-box active" : "question-box"}>
-                        <div onClick={() => setActiveQuestion(activeQuestion === index ? null : index)} className="question-section">
-                            <p >{question.question}</p>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
-                                 role="button"
-                                 aria-expanded={activeQuestion === index}
-                                 aria-label={`Toggle answer: ${question.question}`}
-                            >
-                                <path fill="currentColor" d="M340.864 149.312a30.59 30.59 0 0 0 0 42.752L652.736 512 340.864 831.872a30.59 30.59 0 0 0 0 42.752 29.12 29.12 0 0 0 41.728 0L714.24 534.336a32 32 0 0 0 0-44.672L382.592 149.376a29.12 29.12 0 0 0-41.728 0z"></path>
-                            </svg>
-                        </div>
+                    <div className="questions-box-container">
+                        {questionData.map((question, index) => (
+                            <div key={index} className={activeQuestion === index ? "question-box active" : "question-box"}>
+                                <div onClick={() => setActiveQuestion(activeQuestion === index ? null : index)} className="question-section">
+                                    <p >{question.question}</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
+                                         role="button"
+                                         aria-expanded={activeQuestion === index}
+                                         aria-label={`Toggle answer: ${question.question}`}
+                                    >
+                                        <path fill="currentColor" d="M340.864 149.312a30.59 30.59 0 0 0 0 42.752L652.736 512 340.864 831.872a30.59 30.59 0 0 0 0 42.752 29.12 29.12 0 0 0 41.728 0L714.24 534.336a32 32 0 0 0 0-44.672L382.592 149.376a29.12 29.12 0 0 0-41.728 0z"></path>
+                                    </svg>
+                                </div>
 
-                        <div className="collapse-item">
-                            <div>
-                                <img src="/green-line.png"/>
+                                <div className="collapse-item">
+                                    <div>
+                                        <img src="/green-line.png"/>
+                                    </div>
+                                    <p className="answer">
+                                        {question.answer}
+                                    </p>
+                                </div>
                             </div>
-                            <p className="answer">
-                                {question.answer}
-                            </p>
-                        </div>
-                    </div>
-                ))}
+                        ))}
 
+                    </div>
+                </div>
             </div>
         </section>
     )

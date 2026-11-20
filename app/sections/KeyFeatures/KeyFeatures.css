@@ -5,7 +5,8 @@
     height: min(173.828vh, 97.778vw);
     justify-content: center;
     max-width: 1920px;
-    width: 100vw;
+    width: 100vw;;
+    padding-top: min(17.422vh, 9.8vw);
 }
 
 .key-features-grid-container {
@@ -48,14 +49,14 @@
     width: min(60.123vh, 33.819vw);
 }
 
-.card-3 {
+.card-3-key-features {
     height: min(60.123vh, 33.819vw);
     overflow: hidden;
     position: relative;
     width: min(73.333vh, 41.25vw);
 }
 
-.card-4 {
+.card-4-key-features {
     align-items: flex-end;
     background: linear-gradient(to bottom right, #3a5c10, #3d2e08);
     height: min(60.123vh, 33.819vw);
@@ -77,6 +78,7 @@
     position: absolute;
     top: 9.5%;
     width: min(39.259vh, 22.083vw);
+    opacity: 0;
 }
 
 .card-1-key-features .card-content .icons-container {
@@ -102,25 +104,37 @@
 
 .card-1-key-features .card-content .icons-container .icons-content .icon-1 {
     left: 2.5%;
+    opacity: 0;
     top: 8%;
+    transform: translate(150%, 150%);
 }
 .card-1-key-features .card-content .icons-container .icons-content .icon-2 {
+    opacity: 0;
     top: 2%;
+    transform: translateY(160%);
 }
 .card-1-key-features .card-content .icons-container .icons-content .icon-3 {
+    opacity: 0;
     right: 2%;
     top: 5%;
+    transform: translate(-150%, 150%);
 }
 .card-1-key-features .card-content .icons-container .icons-content .icon-4 {
     bottom: 4%;
     left: 2.5%;
+    opacity: 0;
+    transform: translate(150%, -150%);
 }
 .card-1-key-features .card-content .icons-container .icons-content .icon-5 {
     bottom: 1%;
+    opacity: 0;
+    transform: translateY(-150%);
 }
 .card-1-key-features .card-content .icons-container .icons-content .icon-6 {
     bottom: 7%;
+    opacity: 0;
     right: 2%;
+    transform: translate(-150%, -150%);
 }
 
 .center-img-content {
@@ -129,6 +143,7 @@
     position: absolute;
     top: 20%;
     z-index: 2;
+    transform: rotate(-7deg);
 }
 
 .center-img-content img {
@@ -141,11 +156,10 @@
     position: absolute;
     margin-bottom: min(1.244vh, .7vw);
     width: min(47.778vh, 26.875vw);
-    height: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    bottom: -43%;
+    bottom: 7%;
     left: 10%;
     gap: 0px;
 }
@@ -167,12 +181,11 @@
     position: absolute;
     margin-bottom: min(1.244vh, .7vw);
     width: min(47.778vh, 26.875vw);
-    height: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     left: 10%;
-    top: -7%;
+    top: 7%;
     gap: 0px;
 }
 
@@ -187,48 +200,52 @@
 }
 
 .card-2-key-features .image-stack-container1{
-    top: 48%;
+    top: 45%;
     width: 80%;
     z-index: 100;
+    transform: translateY(-25);
 }
 
 .card-2-key-features .image-stack-container2{
-    top: 60%;
+    top: 56%;
     width: 62.5%;
     z-index: 99;
+    opacity: 0;
+    transform: translateY(-45);
 }
 
 .card-2-key-features .image-stack-container3{
-    top: 71%;
+    top: 67%;
     width: 50%;
     z-index: 98;
+    opacity: 0;
+    transform: translateY(-50);
 }
 
-.card-3 .image-stack-container {
+.card-3-key-features .image-stack-container {
     position: absolute;
 }
 
-.card-3 .text-container-key-features {
+.card-3-key-features .text-container-key-features {
     position: absolute;
     margin-bottom: min(1.244vh, .7vw);
     width: 40%;
-    height: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     left: 8%;
-    top: -7%;
+    top: 7%;
     gap: 0px;
 }
-.card-3 .image-stack-container .image-1 {
+.card-3-key-features .image-stack-container .image-1 {
     width: 100%;
 }
-.card-3 .image-stack-container .image-2 {
+.card-3-key-features .image-stack-container .image-2 {
     width: 100%;
 }
 
 
-.card-3 .image-stack-container1{
+.card-3-key-features .image-stack-container1{
     top: 51%;
     left: 32%;
     width: 57%;
@@ -236,7 +253,7 @@
     rotate: 15.5deg;
 }
 
-.card-3 .image-stack-container2{
+.card-3-key-features .image-stack-container2{
     top: 6%;
     left: 42%;
     width: 45%;
@@ -244,38 +261,37 @@
     rotate: 15.5deg;
 }
 
-.card-4 .image-stack-container {
+.card-4-key-features .image-stack-container {
     position: absolute;
     top: 9%;
     left: 37%;
     width: 52%;
 }
 
-.card-4 .image-stack-container img{
+.card-4-key-features .image-stack-container img{
     width: 100%
 }
 
-.card-4 .text-container-key-features {
+.card-4-key-features .text-container-key-features {
     position: absolute;
     margin-bottom: min(1.244vh, .7vw);
     width: min(30.778vh, 20.875vw);
-    height: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     left: 10%;
-    top: 58%;
+    bottom: 7%;
     gap: 0px;
 }
 
-.card-4 .text-container-key-features .title-key-features{
+.card-4-key-features .text-container-key-features .title-key-features{
     color: #fff;
     font-size: min(3.703vh, 2.083vw);
     margin-bottom: min(1.244vh, .7vw);
     font-weight: 600;
 }
 
-.card-4 .text-container-key-features .download-now-btn-key-features {
+.card-4-key-features .text-container-key-features .download-now-btn-key-features {
     background: #00d776;
     border-radius: min(12.345vh, 6.944vw);
     color: #000;

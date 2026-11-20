@@ -9,8 +9,6 @@
     justify-content: start;
     position: relative;
     width: 100vw;
-
-    margin-top: min(11.734vh, 6.6vw);
 }
 
 .text-container-home {
@@ -63,6 +61,7 @@
     position: absolute;
     right: unset;
     top: -.9%;
+    left: 23%;
     transform: translate(-1.3vw);
     width: min(69.136vh, 38.889vw);
     z-index: 3;

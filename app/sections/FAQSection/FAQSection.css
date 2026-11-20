@@ -1,10 +1,23 @@
 .FAQ-section {
     display: flex;
-    flex-direction: column;
-    gap: min(4.978vh, 2.8vw);
-
+    justify-content: center;
     margin-top: min(7.467vh, 4.2vw);
     padding-top: min(17.225vh, 9.689vw);
+    width: 100vw;
+}
+
+.faq-content{
+    display: flex;
+    justify-content: center;
+    width: min(177.778vh, 100vw);
+}
+
+.center-content{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: min(123.456vh, 69.444vw);
+    gap: min(4.978vh, 2.8vw);
 }
 
 .questions-box-container{

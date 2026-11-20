@@ -1,155 +1,108 @@
 .about-us-section {
-    padding-top: min(12.345vh, 6.944vw);
-    box-sizing: border-box;
-
-    position: relative;
-}
-
-.bubble-images-outer{
-    position: relative;
-    height: 100vh;
-}
-
-.bubble-images-inner {
-    position: absolute;
-    width: 100%;
-    height: calc(100vh - min(12.345vh, 6.944vw));
-}
-
-
-.bubble-image {
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    height: max-content;
-    padding: 20px 0;
-    width: min(14vw, 26vw);
+    padding-top: min(12.345vh, 6.944vw);
+    width: 100vw;
+}
+
+.about-us-content{
+    display: flex;
+    flex-direction: column;
+    height: min(73.456vh, 41.319vw);
+    justify-content: start;
+    position: relative;
+    text-align: center;
+    width: min(123.456vh, 69.444vw);
+}
+
+.bubble-bg{
+    height: 100%;
+    left: 0px;
     position: absolute;
+    top: 0px;
+    width: 100%;
 }
 
-.bubble-yellow {
-    background: #ddf657;
+.bubble {
+    align-items: center;
+    display: flex;
+    height: min(12.345vh, 6.944vw);
+    justify-content: center;
+    position: absolute;
+    width: min(24.692vh, 13.889vw);
+    border-radius: min(24.692vh, 13.889vw);
+    overflow: hidden;
 }
 
-.bubble-orange {
-    background: #f6be57;
-    top: 75.6%;
-}
-
-.bubble-green {
-    background: #8ff657;
-    right: 0;
-    top: 13.5%;
-}
-
-.bubble-blue {
-    background: #57a1f6;
-    right: 0;
-    top: 57%;
-}
-
-.bubble-image img {
+.bubble img {
     height: min(9.259vh, 5.208vw);
     width: min(9.259vh, 5.208vw);
 }
 
-.text-contents-container{
-    position: absolute;
-    z-index: 100;
+.bubble-yellow {
+    background: rgb(221, 246, 87);
+}
 
+.bubble-orange {
+    bottom: min(-5.156vh, -2.9vw);
+    background: rgb(246, 190, 87);
+}
+
+.bubble-green {
+    right: 0px;
+    top: min(12.089vh, 6.8vw);
+    background: rgb(143, 246, 87);
+}
+
+.bubble-blue {
+    bottom: min(11.022vh, 6.2vw);
+    right: 0px;
+    background: rgb(87, 161, 246);
+}
+
+.about-us-text-container {
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
-    width: 100%;
 }
 
-.text-contents-container .title-bold{
-    color: #000;
+.about-us-title{
+    color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
-    font-weight: bold;
     font-size: min(6.172vh, 3.472vw);
-    gap: min(1.6vh, .9vw);
     line-height: 1;
     margin-top: min(11.2vh, 6.3vw);
     text-align: center;
-
+    gap: min(1.6vh, 0.9vw);
+    font-weight: 700;
 }
 
-.text-contents-container .subtext-container {
+.about-us-sub-title {
     align-items: center;
-    color: #000;
+    color: rgb(0, 0, 0);
     display: flex;
     font-size: min(2.469vh, 1.389vw);
-    gap: min(3.556vh, 2vw);
     justify-content: center;
     line-height: 1;
+    gap: min(3.556vh, 2vw);
     margin-block: min(11.378vh, 6.4vw) min(5.867vh, 3.3vw);
 }
 
-.text-contents-container .subtext-container p {
-    margin: 0;
-}
-
-.text-contents-container .subtext-container .white-green-line-1 {
-    background: linear-gradient(-90deg, #289600, transparent 90%);
-    height: min(.37vh, .208vw);
+.white-green-line {
+    height: min(0.37vh, 0.208vw);
     width: min(7.408vh, 4.167vw);
+    background: linear-gradient(-90deg, rgb(40, 150, 0), transparent 90%);
 }
 
-.text-contents-container .subtext-container .white-green-line-2 {
-    background: linear-gradient(90deg, #289600, transparent 90%);
-    height: min(.37vh, .208vw);
-    width: min(7.408vh, 4.167vw);
+.about-us-sub-title .sub-title {
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: min(2.469vh, 1.389vw);
 }
 
-
-@media (max-width: 960px) {
-    .bubble-images-outer {
-        height: 35vh;
-    }
-    .bubble-images-inner {
-        height: 35vh;
-    }
-
-    .bubble-image {
-        padding: 10px;
-        width: min(12vw, 26vw);
-    }
-
-}
-
-
-@media (max-width: 576px) {
-    .bubble-images-inner {
-        position: fixed;
-        display: none;
-    }
-
-    .bubble-images-outer{
-        position: relative;
-        height: 60vh;
-    }
-
-    .text-contents-container .title-bold {
-        font-size: min(5.555vh, 8.333vw);
-        font-weight: 700;
-        line-height: 1.28;
-        margin-block: min(8.64vh, 18.7vw) min(5.083vh, 11vw);
-    }
-
-    .text-contents-container .subtext-container {
-        gap: min(6.053vh, 13.1vw);
-        margin: 0;
-    }
-
-    .text-contents-container .subtext-container p {
-        text-align: center;
-        font-size: min(2.963vh, 4.444vw);
-        margin-bottom: min(6.053vh, 13.1vw);
-    }
+.about-us-sub-title:last-child {
+    background: linear-gradient(90deg, rgb(40, 150, 0), transparent 90%);
 }
 

@@ -1,8 +1,34 @@
+"use client"
+
 import "./BenefitsSection.css"
 
 import GreenTag from "@/app/components/GreenTag";
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {useGSAP} from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function BenefitsSection() {
+
+    useGSAP(() => {
+        const cards = gsap.utils.toArray(".benefits-card");
+
+        cards.forEach((card, index) => {
+            gsap.to(card, {
+                opacity: index === cards.length - 1 ? 1 : 0,
+                scale: index === cards.length - 1 ? 1 : 0.8,
+                scrollTrigger: {
+                    trigger: card,
+                    start: "-35% top",
+                    end: "+=100%",
+                    pin: true,
+                    pinSpacing: false,
+                    scrub: true,
+                }
+            });
+        });
+    }, []);
 
     const benefitsData = [
         {
@@ -39,7 +65,7 @@ function BenefitsSection() {
     ]
 
     return (
-        <section className="benefits-section section section-benefits">
+        <section className="benefits-section section">
             <div className="benefits-content">
                 <GreenTag imgIcon="green-star" text="Benefits"
                           title1="Experience " title2=" Future of Social Media" flex=""/>

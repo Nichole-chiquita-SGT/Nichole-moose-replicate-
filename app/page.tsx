@@ -21,16 +21,16 @@ export default function Home() {
           {/*    position: "fixed",*/}
           {/*    zIndex: 9999,*/}
           {/*}}/>*/}
-          <Intro/>
+          {/*<Intro/>*/}
 
           <main className="main-content-container">
               <Navbar/>
-              <HomeSection id="home"/>
-              <AboutUsSection id="about-us"/>
-              <KeyFeatures id="key-features"/>
+              <HomeSection/>
+              <AboutUsSection />
+              <KeyFeatures/>
               <AdditionalFeaturesSection/>
               <BenefitsSection/>
-              <FAQSection id="faq"/>
+              <FAQSection />
               <CTASection/>
               <Footer/>
           </main>

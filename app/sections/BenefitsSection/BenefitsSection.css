@@ -1,5 +1,9 @@
 .benefits-section {
     margin-top: min(28.667vh, 14.5vw);
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 85vh;
 }
 
 .benefits-content {
@@ -11,14 +15,10 @@
 }
 
 .card-container-benefits {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: min(6.172vh, 3.472vw);
-    height: -moz-fit-content;
-    height: fit-content;
-    opacity: 1;
-    transform: scale(1);
-    transition: transform .4s ease-in-out;
     width: 100%;
 }
 
@@ -29,16 +29,16 @@
     height: min(58.025vh, 32.639vw);
     justify-content: center;
     overflow: hidden;
-    transform-origin: top center;
-    transition: all .05s linear;
+    position: relative;
     width: 100%;
 }
 
 .benefits-card-bg {
+    position: absolute;
+    inset: 0;
     height: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
     width: 100%;
+    object-fit: fill;
 }
 
 .benefits-card-content {

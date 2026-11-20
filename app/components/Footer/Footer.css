@@ -4,7 +4,7 @@
     gap: min(2.133vh, 1.2vw);
     height: min(25.6vh, 14.4vw);
     justify-content: end;
-    width: 100%;
+    width: min(123.456vh, 69.444vw);
 
 }
 

@@ -1,9 +1,213 @@
+"use client"
+
 import "./KeyFeatures.css"
 import GreenTag from "@/app/components/GreenTag";
 
-function KeyFeatures ({ id }: { id?: string }) {
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {useGSAP} from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger)
+
+function KeyFeatures () {
+    useGSAP(() => {
+
+        // card-1-image-aniation
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".section-key-features",
+                start: "20% center",
+                end: "50%% center",
+                toggleActions: "play reverse play reverse"
+            }
+        })
+        tl.to(".center-img-content", {
+            rotate: "0deg",
+            duration: 1,
+            ease: "power3.out",
+        })
+
+        tl.to(".icon-1", {
+            y: 0,
+            x: 0,
+            duration: 1,
+            ease: "power3.out",
+            opacity: 1,
+        }, "<")
+
+        tl.to(".icon-2", {
+            y: 0,
+            x: 0,
+            duration: 1,
+            ease: "power3.out",
+            opacity: 1,
+        }, "<")
+
+        tl.to(".icon-3", {
+            y: 0,
+            x: 0,
+            duration: 1,
+            ease: "power3.out",
+            opacity: 1,
+        }, "<")
+
+        tl.to(".icon-4", {
+            y: 0,
+            x: 0,
+            duration: 1,
+            ease: "power3.out",
+            opacity: 1,
+        }, "<")
+
+        tl.to(".icon-5", {
+            y: 0,
+            x: 0,
+            duration: 1,
+            ease: "power3.out",
+            opacity: 1,
+        }, "<")
+
+        tl.to(".icon-6", {
+            y: 0,
+            x: 0,
+            duration: 1,
+            ease: "power3.out",
+            opacity: 1,
+        }, "<")
+
+        tl.to(".line-for-icon", {
+            opacity: 1,
+            duration: 1,
+        }, "<+=0.3")
+
+        // card-2-image-aniation
+
+        gsap.to(".image-stack-container", {
+            y: 0,
+            stagger: 0.2,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: ".section-key-features",
+                start: "20% center",
+                end: "40%% center",
+                toggleActions: "play none none reverse"
+            }
+        })
+
+        // text card 1 animation
+        gsap.from(".card-1-key-features .title-card-key-features ", {
+            y:100,
+            opacity: 0,
+            ease: "power3.out",
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".section-key-features",
+                start: "29% center",
+                end: "40%% center",
+
+                toggleActions: "play none none reverse",
+            }
+        })
+
+        gsap.from(".card-1-key-features .des-card-key-features ", {
+            y:100,
+            opacity: 0,
+            ease: "power3.out",
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".section-key-features",
+                start: "32% center",
+                end: "40%% center",
+                toggleActions: "play none none reverse",
+            }
+        })
+
+        // text card 2 animation
+        gsap.from(".card-2-key-features .title-card-key-features ", {
+            y:100,
+            opacity: 0,
+            ease: "power3.out",
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".section-key-features",
+                start: "10% center",
+                end: "40%% center",
+
+                toggleActions: "play none none reverse",
+            }
+        })
+
+        gsap.from(".card-2-key-features .des-card-key-features ", {
+            y:100,
+            opacity: 0,
+            ease: "power3.out",
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".section-key-features",
+                start: "13% center",
+                end: "40%% center",
+                toggleActions: "play none none reverse",
+            }
+        })
+
+        // text card 3 animation
+        gsap.from(".card-3-key-features .title-card-key-features ", {
+            y:100,
+            opacity: 0,
+            ease: "power3.out",
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".section-key-features",
+                start: "45% center",
+                end: "60%% center",
+                toggleActions: "play none none reverse",
+            }
+        })
+
+        gsap.from(".card-3-key-features .des-card-key-features ", {
+            y:100,
+            opacity: 0,
+            ease: "power3.out",
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".section-key-features",
+                start: "50% center",
+                end: "60%% center",
+                toggleActions: "play none none reverse",
+            }
+        })
+
+        // text card 4 animation
+        gsap.from(".card-4-key-features .title-key-features ", {
+            y:100,
+            opacity: 0,
+            ease: "power3.out",
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".section-key-features",
+                start: "65% center",
+                end: "75% center",
+                toggleActions: "play none none reverse",
+            }
+        })
+
+        gsap.from(".card-4-key-features .download-now-btn-key-features ", {
+            y:100,
+            opacity: 0,
+            ease: "power3.out",
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".section-key-features",
+                start: "70% center",
+                end: "75% center",
+                toggleActions: "play none none reverse",
+            }
+        })
+
+    }, []);
+
     return (
-        <section id={id}  className="key-features-root section section-key-features">
+        <section id="key-features"  className="key-features-root section section-key-features">
             <GreenTag
                 imgIcon="green-croun"
                 text="Key Features"
@@ -68,7 +272,7 @@ function KeyFeatures ({ id }: { id?: string }) {
                         </div>
                     </div>
                 </div>
-                <div className="card-3 card-key-features">
+                <div className="card-3-key-features card-key-features">
                     <img src="/key-features-grid/grid3/grid-3-bg.png" className="card-bg"/>
                     <div className="card-content">
                         <div className="image-stack-container image-stack-container1">
@@ -91,7 +295,7 @@ function KeyFeatures ({ id }: { id?: string }) {
                         </div>
                     </div>
                 </div>
-                <div className="card-4 card-key-features">
+                <div className="card-4-key-features card-key-features">
                     <img src="/key-features-grid/grid4/grid-4-bg.png" className="card-bg"/>
                     <div className="card-content">
                         <div className="image-stack-container">

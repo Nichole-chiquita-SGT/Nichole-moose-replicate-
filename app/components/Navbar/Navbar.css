@@ -1,0 +1,233 @@
+.navbar-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: min(6.172vh, 3.472vw);
+    position: sticky;
+    top: 0px;
+    width: 100vw;
+    z-index: 100;
+    background: transparent;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.navbar-container.navbar-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.blur-bg-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+
+    align-content: space-between;
+    height: 100vh;
+    pointer-events: none;
+    width: 100vw;
+    z-index: 1;
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+}
+
+.bg {
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.bg-1 {
+    backdrop-filter: blur(0.0390625px);
+    mask-image: linear-gradient(0deg, transparent 0px, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 25%, transparent 37.5%);
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    border-radius: 0px;
+    inset: 0px;
+}
+
+.bg-2 {
+    backdrop-filter: blur(0.078125px);
+    mask-image: linear-gradient(0deg, transparent 12.5%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 37.5%, transparent 50%);
+    pointer-events: none;
+    position: absolute;
+    z-index: 2;
+    border-radius: 0px;
+    inset: 0px;
+}
+
+.bg-3 {
+    backdrop-filter: blur(0.15625px);
+    mask-image: linear-gradient(0deg, transparent 25%, rgb(0, 0, 0) 37.5%, rgb(0, 0, 0) 50%, transparent 62.5%);
+    pointer-events: none;
+    position: absolute;
+    z-index: 3;
+    border-radius: 0px;
+    inset: 0px;
+}
+
+.bg-4 {
+    backdrop-filter: blur(0.3125px);
+    mask-image: linear-gradient(0deg, transparent 37.5%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 62.5%, transparent 75%);
+    pointer-events: none;
+    position: absolute;
+    z-index: 4;
+    border-radius: 0px;
+    inset: 0px;
+}
+
+.bg-5 {
+    backdrop-filter: blur(0.625px);
+    mask-image: linear-gradient(0deg, transparent 50%, rgb(0, 0, 0) 62.5%, rgb(0, 0, 0) 75%, transparent 87.5%);
+    pointer-events: none;
+    position: absolute;
+    z-index: 5;
+    border-radius: 0px;
+    inset: 0px;
+}
+
+.bg-6 {
+    backdrop-filter: blur(1.25px);
+    mask-image: linear-gradient(0deg, transparent 62.5%, rgb(0, 0, 0) 75%, rgb(0, 0, 0) 87.5%, transparent);
+    pointer-events: none;
+    position: absolute;
+    z-index: 6;
+    border-radius: 0px;
+    inset: 0px;
+}
+
+.bg-7 {
+    backdrop-filter: blur(2.5px);
+    mask-image: linear-gradient(0deg, transparent 75%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 100%, transparent 112.5%);
+    pointer-events: none;
+    position: absolute;
+    z-index: 7;
+    border-radius: 0px;
+    inset: 0px;
+}
+
+.bg-8 {
+    backdrop-filter: blur(5px);
+    mask-image: linear-gradient(0deg, transparent 87.5%, rgb(0, 0, 0) 100%, rgb(0, 0, 0) 112.5%, transparent 125%);
+    pointer-events: none;
+    position: absolute;
+    z-index: 8;
+    border-radius: 0px;
+    inset: 0px;
+}
+
+.navbar-inner {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    width: 100vw;
+    gap: 0.3vw;
+    margin-inline: auto;
+    transition: 0.4s ease-in-out;
+}
+
+.nav-logo-container {
+    height: min(6.172vh, 3.472vw);
+    width: min(18.681vh, 10.508vw);
+    z-index: 10;
+}
+
+.nav-logo-container img {
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%;
+}
+
+.nav-links-bar {
+    align-items: center;
+    display: flex;
+    font-size: min(1.975vh, 1.111vw);
+    height: min(5.186vh, 2.917vw);
+    justify-content: space-between;
+    width: min(74.212vh, 41.744vw);
+    z-index: 10;
+    background: rgb(245, 245, 245);
+    border-radius: min(12.345vh, 6.944vw);
+    margin-inline: min(5.333vh, 3vw);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.nav-links-bar .link {
+    align-items: center;
+    color: rgb(85, 85, 85);
+    display: flex;
+    height: 70%;
+    position: relative;
+    width: fit-content;
+    border-radius: min(12.345vh, 6.944vw);
+    overflow: hidden;
+    padding-inline: min(3.086vh, 1.736vw);
+    transition: 0.5s;
+
+    text-decoration: none;
+}
+
+.nav-links-bar .link.active {
+    background-color: rgb(0, 215, 118);
+    color: rgb(6, 20, 12);
+    font-weight: 600;
+    height: 100%;
+}
+
+.dot {
+    left: 0px;
+    margin-right: min(1.234vh, 0.694vw);
+    transform: scale(0);
+    transform-origin: left center;
+    width: fit-content;
+    transition: 0.5s;
+}
+
+.dot.active {
+    transform: scale(1);
+}
+
+.nav-link-text-con {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: min(0.622vh, 0.35vw);
+    transform: translateY(0px);
+    gap: min(0.178vh, 0.1vw);
+
+}
+
+.nav-text {
+    align-items: center;
+    display: flex;
+    height: min(2.844vh, 1.6vw);
+}
+
+.nav-link-text-replace {
+    color: rgb(6, 20, 12);
+    opacity: 0;
+    position: absolute;
+    right: min(3.086vh, 1.736vw);
+    transition: 0.3s;
+
+
+    color: rgb(6, 20, 12);
+    position: absolute;
+    right: min(3.086vh, 1.736vw);
+}
+
+
