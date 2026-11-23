@@ -17,13 +17,16 @@ function HomeSection ({ id }: { id?: string }) {
         const section = sectionRef.current;
         if (!section) return
 
-        const phoneImage = section.querySelector<HTMLElement>(".image-container");
+        const isMobile = window.matchMedia("(max-width: 600px)").matches;
+        const phoneImage = section.querySelector<HTMLElement>(
+            isMobile ? ".image-container-mobile" : ".image-container"
+        );
         if (!phoneImage) return;
 
         gsap.fromTo(phoneImage, {
             yPercent: 0
         }, {
-            yPercent: -20,
+            yPercent: isMobile ? -12 : -20,
             scrollTrigger: {
                 trigger: section,
                 start: "27.5% center",
@@ -41,8 +44,10 @@ function HomeSection ({ id }: { id?: string }) {
             yto(((e.clientY - rect.top) / rect.height - 0.5) * -20)
         }
 
-        section.addEventListener("mousemove", follow)
-        return () => section.removeEventListener("mousemove", follow)
+        if (!isMobile) section.addEventListener("mousemove", follow)
+        return () => {
+            if (!isMobile) section.removeEventListener("mousemove", follow)
+        }
     }, { scope: sectionRef });
 
     return (
@@ -122,6 +127,10 @@ function HomeSection ({ id }: { id?: string }) {
                         <br/>
                         Moments Without Filtering or Editing Tools.
                     </div>
+                    <div className="sub-title mobile">
+                        Connect with Real People <br/> and Share Genuine
+                        Moments Without Filtering or Editing Tools.
+                    </div>
 
                     <div className="info-list">
                         <div className="list">
@@ -141,6 +150,28 @@ function HomeSection ({ id }: { id?: string }) {
                             <div className="vertical-line"></div>
                         </div>
                         <div className="list">
+                            <p>Authentic</p>
+                        </div>
+                    </div>
+                    <div className="info-list mobile">
+                        <div className="list">
+                            <div className="home-dot"></div>
+                            <p>Real</p>
+                        </div>
+                        <div className="list">
+                            <div className="home-dot"></div>
+                            <p>Unfiltered</p>
+                        </div>
+                        <div className="list">
+                            <div className="home-dot"></div>
+                            <p>Proven</p>
+                        </div>
+                        <div className="list">
+                            <div className="home-dot"></div>
+                            <p>Genuine</p>
+                        </div>
+                        <div className="list">
+                            <div className="home-dot"></div>
                             <p>Authentic</p>
                         </div>
                     </div>

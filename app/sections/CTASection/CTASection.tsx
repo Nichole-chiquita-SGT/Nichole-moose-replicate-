@@ -71,12 +71,30 @@ function AboutUsSection(){
                             <span className="green-line">Authenticity</span>
                         </div>
 
+                        <div className="cta-title mobile">
+                            <span>Your </span>
+                            <span>First </span>
+                            <span>Step </span>
+                            <span>To </span>
+                            <span>Create</span>
+                            <span className="green-line">Content </span>
+                            <br/>
+                            <span className="green-line">That</span>
+                            <span className="green-line">Values </span>
+                            <span className="green-line">Authenticity</span>
+                        </div>
+
                         <div className="cta-white-line">
                             <img src="/white-line.png"/>
                         </div>
 
                         <div className="cta-des">
                             Express yourself honestly and connect through moments <br/>
+                            that truly matter.
+                        </div>
+
+                        <div className="cta-des mobile">
+                            Express yourself honestly and connect through moments
                             that truly matter.
                         </div>
 

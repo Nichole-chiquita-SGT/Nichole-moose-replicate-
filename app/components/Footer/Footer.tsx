@@ -10,7 +10,10 @@ function Footer() {
 
             <div className="footer-content">
                 <p>© 2025 Copyright - Moose <br/>Designed by SGT</p>
-                <DownloadBtnBlack/>
+
+                <div>
+                   <DownloadBtnBlack/>
+                </div>
             </div>
         </div>
     )

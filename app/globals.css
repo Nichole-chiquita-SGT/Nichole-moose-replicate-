@@ -171,4 +171,11 @@ body {
         color: var(--main-color);
     }
 
+
+    .download-now-btn {
+        font-size: min(6.563vh, 4.444vw) !important;
+        height: min(6.188vh, 11.667vw) !important;
+        width: min(23.644vh, 42.033vw);
+    }
+
 }

@@ -63,7 +63,6 @@
 
 .img-container-additional-features img {
     height: 100%;
-    -o-object-fit: contain;
     object-fit: contain;
     width: 100%;
 }
@@ -125,4 +124,84 @@
     margin-top: min(-.533vh, -.3vw);
     width: min(49.383vh, 27.778vw);
     z-index: 1;
+}
+
+@media (max-width: 600px) {
+    .title-additional-features {
+        text-align: center;
+        width: 100vw;
+    }
+
+    .title-additional-features span {
+        font-size: min(4.687vh, 8.333vw);
+        font-weight: 600;
+
+    }
+
+    .additionalFeatures-section-additional-features{
+        height: auto;
+    }
+
+
+    .variety-text-additional-features,
+    .features-text-additional-features {
+        display: none;
+    }
+
+
+    .card-container-additional-features {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        height: min(110.156vh, 195.833vw);
+        margin-top: min(14.344vh, 25.5vw);
+        width: min(50vh, 88.889vw);
+        gap: min(3.906vh, 6.944vw);
+    }
+
+    .card-additional-features {
+        align-items: center;
+        display: flex;
+        height: min(16.406vh, 29.167vw);
+        width: min(50vh, 88.889vw);
+        background: rgb(245, 245, 245);
+        border-radius: min(1.563vh, 2.778vw);
+        gap: min(3.094vh, 5.5vw);
+    }
+
+    .img-container-additional-features {
+        align-items: center;
+        display: flex;
+        height: min(9.65vh, 17.156vw);
+        justify-content: center;
+        margin-left: min(3.15vh, 5.6vw);
+        width: min(9.65vh, 17.156vw);
+        border-radius: min(1.563vh, 2.778vw);
+    }
+
+    .text-container-additional-features {
+        display: flex;
+        flex-direction: column;
+        width: min(30.606vh, 54.411vw);
+        gap: min(2.25vh, 4vw);
+        flex: 1;
+    }
+
+    .title-card-additional-features {
+        font-size: min(2.5vh, 4.444vw) !important;
+    }
+
+    .des-card-additional-features {
+        font-size: min(1.875vh, 3.333vw) !important;
+        line-height: min(2.344vh, 4.167vw) !important;
+        margin-bottom: min(0.394vh, 0.7vw);
+
+    }
+
+    .phone-additional-features {
+        height: min(64.063vh, 113.889vw);
+        width: min(50vh, 88.889vw);
+    }
+
+
 }

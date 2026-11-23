@@ -131,3 +131,117 @@
     height: 100%;
     width: 100%;
 }
+
+.cta-title.mobile {
+    display: none;
+}
+
+.cta-des.mobile{
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .CTA-section {
+        padding-top: 0;
+    }
+    .cta-content {
+        height: min(109.631vh, 194.9vw);
+        position: relative;
+        text-align: center;
+        width: min(50.063vh, 89vw);
+        border-radius: min(4.275vh, 7.6vw);
+        overflow: hidden;
+    }
+
+    .bg-container {
+        height: min(109.631vh, 194.9vw);
+        position: relative;
+        text-align: center;
+        width: min(50.063vh, 89vw);
+        border-radius: min(4.275vh, 7.6vw);
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .cta-title span {
+        font-size: min(4.612vh, 8.2vw);
+        font-weight: 400;
+        letter-spacing: min(0.034vh, 0.06vw);
+        line-height: 1.295;
+    }
+
+    .cta-title {
+        display: none;
+    }
+
+    .cta-title.mobile {
+        display: block;
+        margin-top: min(6.525vh, 11.6vw);
+        margin-inline-start: min(0.506vh, 0.9vw);
+    }
+
+    .cta-white-line {
+        height: min(0.563vh, 1vw);
+        width: 100%;
+        margin-block: min(6.469vh, 11.5vw) min(0.281vh, 0.5vw);
+    }
+
+    .cta-white-line img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .cta-des {
+        display: none;
+    }
+
+    .cta-des.mobile{
+        display: block;
+        font-size: min(2.531vh, 4.5vw);
+        letter-spacing: min(-0.001vh, -0.001vw);
+        line-height: 1.26;
+        margin-top: min(7.2vh, 12.8vw);
+    }
+
+    .cta-google-play {
+        cursor: pointer;
+        height: min(7.706vh, 13.7vw);
+        margin-top: min(10.35vh, 18.4vw);
+        width: min(27.056vh, 48.1vw);
+        z-index: 2;
+    }
+
+    .card-container-cta {
+        bottom: -59.9%;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100.6%;
+    }
+
+    .card-container-cta .card-cta {
+        bottom: 0px;
+        height: min(35.335vh, 62.817vw);
+        position: absolute;
+        width: min(35.81vh, 63.662vw);
+    }
+
+    .card-container-cta .card-1-cta {
+        left: min(-7.369vh, -13.1vw);
+    }
+
+    .card-container-cta .card-2-cta {
+        right: min(-7.369vh, -13.1vw);
+    }
+
+    .card-container-cta .fade-mask {
+        mask-image: linear-gradient(180deg, #000 0%, transparent 100%);
+        -webkit-mask-image: -webkit-linear-gradient(270deg, #000 0%, transparent 100%);
+        mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+        mask-size: 100% 100%;
+        -webkit-mask-size: 100% 100%;
+    }
+
+}
