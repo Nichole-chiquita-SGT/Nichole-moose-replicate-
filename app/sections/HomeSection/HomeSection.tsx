@@ -23,17 +23,21 @@ function HomeSection ({ id }: { id?: string }) {
         );
         if (!phoneImage) return;
 
-        gsap.fromTo(phoneImage, {
-            yPercent: 0
-        }, {
-            yPercent: isMobile ? -12 : -20,
-            scrollTrigger: {
-                trigger: section,
-                start: "27.5% center",
-                end: "bottom top",
-                scrub: true,
-            },
-        })
+        gsap.fromTo(phoneImage,
+            isMobile ? { y: 0 } : { yPercent: 0 },
+            {
+                ...(isMobile
+                    ? { y: () => -window.innerHeight * 0.3 }
+                    : { yPercent: -20 }),
+                scrollTrigger: {
+                    trigger: section,
+                    start: isMobile ? "top bottom" : "27.5% center",
+                    end: "bottom top",
+                    scrub: true,
+                    invalidateOnRefresh: true,
+                },
+            }
+        )
 
         const xto = gsap.quickTo(phoneImage, "x", { duration: 1.2, ease: "power3.out" });
         const yto = gsap.quickTo(phoneImage, "y", { duration: 1.2, ease: "power3.out" });

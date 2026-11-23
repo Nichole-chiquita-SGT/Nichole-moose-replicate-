@@ -83,10 +83,14 @@ function AboutUsSection() {
                         <span>authenticity.</span>
                     </div>
 
-                    <div className="about-us-sub-title">
+                    <div className="about-us-sub-title mobile">
                         <div className="white-green-line"></div>
                         <div className="sub-title">
                             Feel at ease with a social space you can trust.
+                        </div>
+
+                        <div className="sub-title mobile">
+                            Feel at ease with a social space <br/>you can trust.
                         </div>
                         <div className="white-green-line"></div>
                     </div>

@@ -14,7 +14,7 @@ function DownloadBtnBlack () {
 
     return (
         <button style={style} className="download-now-btn">
-            Download Now
+            <a style={{color: "var(--main-color)", listStyle: "none", textDecoration: "none"}} target="_blank" href="https://play.google.com/store/apps/details?id=com.moose_social&hl=id&pli=1"> Download Now</a>
         </button>
     )
 }

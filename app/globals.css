@@ -78,6 +78,10 @@ body {
     color: var(--main-color);
 }
 
+.green-tag-word {
+    display: inline-block;
+}
+
 
 @media (max-width: 600px) {
     .section {

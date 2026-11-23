@@ -127,6 +127,10 @@ svg:not(:root) {
         margin-bottom: min(15.625vh, 27.778vw);
     }
 
+    .faq-content .green-tag-entrance {
+        width: max-content;
+    }
+
     .center-content {
         width: 100%;
         box-sizing: border-box;

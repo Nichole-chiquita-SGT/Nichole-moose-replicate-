@@ -203,5 +203,8 @@
         width: min(50vh, 88.889vw);
     }
 
+    .phone-container-additional-feature {
+        height: min(64.063vh, 113.889vw);
+    }
 
 }

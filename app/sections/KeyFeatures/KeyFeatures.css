@@ -104,7 +104,7 @@
 
 .card-1-key-features .card-content .icons-container .icons-content .icon-1 {
     left: 2.5%;
-    opacity: 0;
+    opacity: 1;
     top: 8%;
     transform: translate(150%, 150%);
 }
@@ -320,19 +320,19 @@
         gap: 16px;
         width: 100%;
         height: auto;
-        margin-top: 32px;
+        margin-top: min(14.4vh, 25.6vw);
+
+        align-items: center;
     }
 
-    .card-key-features,
-    .card-1-key-features,
-    .card-2-key-features,
-    .card-3-key-features,
-    .card-4-key-features {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1 / 1;
-        border-radius: 24px;
-        flex: 0 0 auto;
+    .card-key-features {
+        align-items: center;
+        border-radius: min(4.687vh, 8.333vw);
+        display: flex;
+        flex-direction: column;
+        height: min(65.625vh, 116.667vw);
+        position: relative;
+        width: min(50vh, 88.889vw);
     }
 
     .card-content {
@@ -365,6 +365,7 @@
         height: 30%;
     }
 
+
     .card-1-key-features .text-container-key-features,
     .card-2-key-features .text-container-key-features,
     .card-3-key-features .text-container-key-features,
@@ -389,61 +390,136 @@
     }
 
     .key-features-root .title-card-key-features {
-        font-size: clamp(18px, 5vw, 24px);
-        line-height: 1.2;
         margin-bottom: 8px;
+        font-size: min(3.75vh, 6.667vw);
+        line-height: 1.2;
     }
 
     .key-features-root .des-card-key-features {
-        font-size: clamp(12px, 3.4vw, 15px);
-        line-height: 1.45;
+        font-size: min(2.541vh, 4.517vw);
+        line-height: min(3.125vh, 5.556vw);
+        width: min(40.625vh, 72.222vw);
+    }
+
+    .card-1-key-features .card-content .line-for-icon {
+        height: min(26.136vh, 46.464vw);
+        opacity: 0;
+        position: absolute;
+        top: 7%;
+        width: min(33.555vh, 59.653vw);
+    }
+
+    .card-1-key-features .card-content .icons-container {
+        height: min(37.689vh, 21.2vw);
+        position: absolute;
+        top: 4%;
+        width: min(49.778vh, 28vw);
+    }
+
+    .card-1-key-features .card-content .icons-container .icons-content {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+    }
+
+    .card-1-key-features .card-content .icons-container .icons-content .icon {
+        height: min(4.749vh, 8.442vw);
+        position: absolute;
+        width: min(4.749vh, 8.442vw);
+    }
+
+    .card-1-key-features .card-content .icons-container .icons-content .icon-1 {
+        left: -70%;
+        opacity: 0;
+        top: 8%;
+    }
+    .card-1-key-features .card-content .icons-container .icons-content .icon-2 {
+        opacity: 0;
+        top: 2%;
+    }
+    .card-1-key-features .card-content .icons-container .icons-content .icon-3 {
+        opacity: 0;
+        right: -70%;
+        top: 5%;
+    }
+    .card-1-key-features .card-content .icons-container .icons-content .icon-4 {
+        top: 220%;
+        left: -70%;
+        opacity: 0;
+    }
+    .card-1-key-features .card-content .icons-container .icons-content .icon-5 {
+        top: 220%;
+        left: 30%;
+        opacity: 0;
+    }
+    .card-1-key-features .card-content .icons-container .icons-content .icon-6 {
+        top: 220%;
+        left: 140%;
+        opacity: 0;
+    }
+
+
+    .center-img-content {
+        top: 15%;
+        height: min(16.604vh, 29.519vw);
+        width: min(31.656vh, 56.278vw);
     }
 
     .card-2-key-features .image-stack-container1 {
-        top: 48%;
+        top: 57%;
+        width: 85%;
     }
 
     .card-2-key-features .image-stack-container2 {
-        top: 59%;
+        top: 65%;
+        width: 70%;
     }
 
     .card-2-key-features .image-stack-container3 {
-        top: 69%;
+        top: 75%;
+        width: 55%;
     }
 
     .card-3-key-features .image-stack-container1 {
-        top: 52%;
-        left: 32%;
-        width: 58%;
+        top: 80%;
+        left: -7%;
+        width: 90%;
     }
 
     .card-3-key-features .image-stack-container2 {
-        top: 8%;
-        left: 48%;
-        width: 43%;
+        top: 45%;
+        left: 5%;
+        width: 68%;
+    }
+
+    .card-3-key-features .text-container-key-features {
+        width: 100%;
     }
 
     .card-4-key-features .image-stack-container {
         top: 8%;
-        left: 43%;
-        width: 48%;
+        left: 28%;
+        width: min(31.25vh, 55.556vw);
+        height: min(31.25vh, 55.556vw);
     }
 
     .card-4-key-features .text-container-key-features {
-        bottom: 8%;
+        bottom: 14%;
         width: 82%;
     }
 
     .card-4-key-features .text-container-key-features .title-key-features {
-        font-size: clamp(24px, 7vw, 32px);
+        font-size: min(4.687vh, 8.333vw);
         margin-bottom: 12px;
     }
 
     .card-4-key-features .text-container-key-features .download-now-btn-key-features {
-        width: 160px;
-        height: 44px;
-        border-radius: 24px;
-        font-size: 14px;
+        font-size: min(2.5vh, 4.444vw);
+        font-weight: 600;
+        height: min(6.563vh, 11.667vw);
+        width: min(24.844vh, 44.167vw);
     }
 
     .section-key-features {

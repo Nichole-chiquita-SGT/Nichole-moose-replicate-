@@ -98,7 +98,7 @@
     z-index: 2;
 }
 
-.green-black-container img {
+.green-black-container > img {
     height: 100%;
     left: 0;
     position: absolute;
@@ -241,7 +241,6 @@
         font-size: min(5.555vh, 8.333vw);
         line-height: 1.36;
         text-align: center;
-        margin-top: min(25vh, 20vw) !important;
     }
 
     .mobile-home-heading {
@@ -269,7 +268,7 @@
         aspect-ratio: 1090 / 1440;
         left: 50%;
         position: absolute;
-        top: 63%;
+        top: 83%;
         translate: -50% 0;
         width: min(70vw, 400px);
         z-index: 1;
@@ -293,7 +292,7 @@
         z-index: 0;
     }
 
-    .green-black-container img {
+    .green-black-container > img {
         display: block;
         height: 100%;
         object-fit: fill;
@@ -309,7 +308,7 @@
     }
 
     .home-white-line {
-        height: clamp(72px, 8vw, 150px);
+        height: clamp(32px, 4vw, 50px);
         width: 100%;
         z-index: 1;
     }
