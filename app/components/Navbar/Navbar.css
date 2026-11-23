@@ -1,128 +1,227 @@
+
 .navbar-container {
     align-items: center;
     display: flex;
     justify-content: center;
     padding-top: min(6.172vh, 3.472vw);
     position: sticky;
-    top: 0px;
-    width: 100vw;
+    top: 0;
+    width: 100%;
     z-index: 100;
     background: transparent;
     transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
 .navbar-container.navbar-hidden {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.navbar-container.navbar-hidden .navbar-inner {
     opacity: 0;
     pointer-events: none;
+    transform: translateY(-110%);
 }
+
+/* ============================= */
+/* PROGRESSIVE BLUR */
+/* ============================= */
 
 .blur-bg-nav {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0px;
-
-    align-content: space-between;
-    height: 100vh;
-    pointer-events: none;
+    position: fixed;
+    inset: 0;
     width: 100vw;
-    z-index: 1;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
 }
 
-.background {
-    display: flex;
-    flex-direction: column;
+.blur-section {
     position: absolute;
-    top: 0px;
-}
-
-.bg {
-    height: 100%;
-    left: 0px;
-    position: absolute;
-    top: 0px;
+    left: 0;
     width: 100%;
+    height: min(10.37vh, 5.833vw);
 }
 
-.bg-1 {
-    backdrop-filter: blur(0.0390625px);
-    mask-image: linear-gradient(0deg, transparent 0px, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 25%, transparent 37.5%);
-    pointer-events: none;
+.blur-section-top {
+    top: 0;
+}
+
+.blur-section-bottom {
+    bottom: 0;
+    transform: scaleY(-1);
+}
+
+.blur-layer {
     position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.blur-layer:nth-child(1) {
     z-index: 1;
-    border-radius: 0px;
-    inset: 0px;
+    -webkit-backdrop-filter: blur(0.0390625px);
+    backdrop-filter: blur(0.0390625px);
+    -webkit-mask-image: linear-gradient(
+            0deg,
+            transparent 0%,
+            #000 12.5%,
+            #000 25%,
+            transparent 37.5%
+    );
+    mask-image: linear-gradient(
+            0deg,
+            transparent 0%,
+            #000 12.5%,
+            #000 25%,
+            transparent 37.5%
+    );
 }
 
-.bg-2 {
-    backdrop-filter: blur(0.078125px);
-    mask-image: linear-gradient(0deg, transparent 12.5%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 37.5%, transparent 50%);
-    pointer-events: none;
-    position: absolute;
+.blur-layer:nth-child(2) {
     z-index: 2;
-    border-radius: 0px;
-    inset: 0px;
+    -webkit-backdrop-filter: blur(0.078125px);
+    backdrop-filter: blur(0.078125px);
+    -webkit-mask-image: linear-gradient(
+            0deg,
+            transparent 12.5%,
+            #000 25%,
+            #000 37.5%,
+            transparent 50%
+    );
+    mask-image: linear-gradient(
+            0deg,
+            transparent 12.5%,
+            #000 25%,
+            #000 37.5%,
+            transparent 50%
+    );
 }
 
-.bg-3 {
-    backdrop-filter: blur(0.15625px);
-    mask-image: linear-gradient(0deg, transparent 25%, rgb(0, 0, 0) 37.5%, rgb(0, 0, 0) 50%, transparent 62.5%);
-    pointer-events: none;
-    position: absolute;
+.blur-layer:nth-child(3) {
     z-index: 3;
-    border-radius: 0px;
-    inset: 0px;
+    -webkit-backdrop-filter: blur(0.15625px);
+    backdrop-filter: blur(0.15625px);
+    -webkit-mask-image: linear-gradient(
+            0deg,
+            transparent 25%,
+            #000 37.5%,
+            #000 50%,
+            transparent 62.5%
+    );
+    mask-image: linear-gradient(
+            0deg,
+            transparent 25%,
+            #000 37.5%,
+            #000 50%,
+            transparent 62.5%
+    );
 }
 
-.bg-4 {
-    backdrop-filter: blur(0.3125px);
-    mask-image: linear-gradient(0deg, transparent 37.5%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 62.5%, transparent 75%);
-    pointer-events: none;
-    position: absolute;
+.blur-layer:nth-child(4) {
     z-index: 4;
-    border-radius: 0px;
-    inset: 0px;
+    -webkit-backdrop-filter: blur(0.3125px);
+    backdrop-filter: blur(0.3125px);
+    -webkit-mask-image: linear-gradient(
+            0deg,
+            transparent 37.5%,
+            #000 50%,
+            #000 62.5%,
+            transparent 75%
+    );
+    mask-image: linear-gradient(
+            0deg,
+            transparent 37.5%,
+            #000 50%,
+            #000 62.5%,
+            transparent 75%
+    );
 }
 
-.bg-5 {
-    backdrop-filter: blur(0.625px);
-    mask-image: linear-gradient(0deg, transparent 50%, rgb(0, 0, 0) 62.5%, rgb(0, 0, 0) 75%, transparent 87.5%);
-    pointer-events: none;
-    position: absolute;
+.blur-layer:nth-child(5) {
     z-index: 5;
-    border-radius: 0px;
-    inset: 0px;
+    -webkit-backdrop-filter: blur(0.625px);
+    backdrop-filter: blur(0.625px);
+    -webkit-mask-image: linear-gradient(
+            0deg,
+            transparent 50%,
+            #000 62.5%,
+            #000 75%,
+            transparent 87.5%
+    );
+    mask-image: linear-gradient(
+            0deg,
+            transparent 50%,
+            #000 62.5%,
+            #000 75%,
+            transparent 87.5%
+    );
 }
 
-.bg-6 {
-    backdrop-filter: blur(1.25px);
-    mask-image: linear-gradient(0deg, transparent 62.5%, rgb(0, 0, 0) 75%, rgb(0, 0, 0) 87.5%, transparent);
-    pointer-events: none;
-    position: absolute;
+.blur-layer:nth-child(6) {
     z-index: 6;
-    border-radius: 0px;
-    inset: 0px;
+    -webkit-backdrop-filter: blur(1.25px);
+    backdrop-filter: blur(1.25px);
+    -webkit-mask-image: linear-gradient(
+            0deg,
+            transparent 62.5%,
+            #000 75%,
+            #000 87.5%,
+            transparent 100%
+    );
+    mask-image: linear-gradient(
+            0deg,
+            transparent 62.5%,
+            #000 75%,
+            #000 87.5%,
+            transparent 100%
+    );
 }
 
-.bg-7 {
-    backdrop-filter: blur(2.5px);
-    mask-image: linear-gradient(0deg, transparent 75%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 100%, transparent 112.5%);
-    pointer-events: none;
-    position: absolute;
+.blur-layer:nth-child(7) {
     z-index: 7;
-    border-radius: 0px;
-    inset: 0px;
+    -webkit-backdrop-filter: blur(2.5px);
+    backdrop-filter: blur(2.5px);
+    -webkit-mask-image: linear-gradient(
+            0deg,
+            transparent 75%,
+            #000 87.5%,
+            #000 100%,
+            transparent 112.5%
+    );
+    mask-image: linear-gradient(
+            0deg,
+            transparent 75%,
+            #000 87.5%,
+            #000 100%,
+            transparent 112.5%
+    );
 }
 
-.bg-8 {
-    backdrop-filter: blur(5px);
-    mask-image: linear-gradient(0deg, transparent 87.5%, rgb(0, 0, 0) 100%, rgb(0, 0, 0) 112.5%, transparent 125%);
-    pointer-events: none;
-    position: absolute;
+.blur-layer:nth-child(8) {
     z-index: 8;
-    border-radius: 0px;
-    inset: 0px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    -webkit-mask-image: linear-gradient(
+            0deg,
+            transparent 87.5%,
+            #000 100%,
+            #000 112.5%,
+            transparent 125%
+    );
+    mask-image: linear-gradient(
+            0deg,
+            transparent 87.5%,
+            #000 100%,
+            #000 112.5%,
+            transparent 125%
+    );
 }
+
+/* ============================= */
+/* NAVBAR CONTENT */
+/* ============================= */
 
 .navbar-inner {
     align-items: center;
@@ -134,6 +233,8 @@
     width: 100vw;
     gap: 0.3vw;
     margin-inline: auto;
+    position: relative;
+    z-index: 1;
     transition: 0.4s ease-in-out;
 }
 
@@ -145,7 +246,6 @@
 
 .nav-logo-container img {
     height: 100%;
-    -o-object-fit: contain;
     object-fit: contain;
     width: 100%;
 }
@@ -176,7 +276,6 @@
     overflow: hidden;
     padding-inline: min(3.086vh, 1.736vw);
     transition: 0.5s;
-
     text-decoration: none;
 }
 
@@ -197,7 +296,7 @@
 }
 
 .dot {
-    left: 0px;
+    left: 0;
     margin-right: min(1.234vh, 0.694vw);
     transform: scaleX(0);
     transform-origin: left center;
@@ -252,11 +351,6 @@
     position: absolute;
     right: min(3.086vh, 1.736vw);
     transition: 0.3s;
-
-
-    color: rgb(6, 20, 12);
-    position: absolute;
-    right: min(3.086vh, 1.736vw);
 }
 
 .mobile-menu-toggle {
@@ -266,6 +360,10 @@
 .nav-download-btn-mobile {
     display: none;
 }
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
 
 @media (max-width: 600px) {
     .navbar-container {
@@ -282,8 +380,8 @@
         pointer-events: auto;
     }
 
-    .blur-bg-nav {
-        display: none;
+    .blur-section {
+        height: 150px;
     }
 
     .navbar-inner {
@@ -298,7 +396,7 @@
     .nav-logo-container {
         position: relative;
         height: min(6.679vh, 11.874vw);
-        transition: transform .3s ease;
+        transition: transform 0.3s ease;
         width: min(20.213vh, 35.935vw);
         z-index: 1202;
     }
@@ -329,8 +427,7 @@
         top: clamp(18px, 5vw, 32px);
         width: min(5.609vh, 9.972vw);
         z-index: 1203;
-
-        transition: transform .3s ease, background-color .3s ease;
+        transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
     .mobile-menu-toggle span {
@@ -339,13 +436,12 @@
         height: min(.313vh, .556vw);
         opacity: 1;
         transform: translateY(0) rotate(0);
-        transition: all .3s ease;
+        transition: all 0.3s ease;
         width: min(2.5vh, 4.444vw);
     }
 
     .mobile-menu-toggle.open {
         position: fixed;
-
         transform: translate(-25%, 25%);
     }
 
@@ -376,7 +472,7 @@
         margin: 0;
         opacity: 0;
         overflow: hidden;
-        padding: 120px 24px 120px;
+        padding: 120px 24px;
         pointer-events: none;
         position: fixed;
         right: 12px;
@@ -393,8 +489,6 @@
         pointer-events: auto;
         transform: scale(1);
         visibility: visible;
-
-
     }
 
     .nav-links-bar .link,
@@ -440,11 +534,10 @@
 
     .nav-links-bar.menu-open .nav-download-btn-mobile {
         display: block;
-        bottom: clamp(44px, 7vh, 72px);
+        bottom: 6%;
         left: 16px;
         position: absolute;
         right: 16px;
-        bottom: 6%;
     }
 
     .nav-links-bar.menu-open .nav-download-btn-mobile .download-now-btn {
@@ -454,5 +547,3 @@
         width: 100%;
     }
 }
-
-

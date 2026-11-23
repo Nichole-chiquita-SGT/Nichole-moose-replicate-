@@ -1,4 +1,5 @@
 import {MdArrowOutward} from "react-icons/md";
+import AnimatedDownloadText from "@/app/components/AnimatedDownloadText";
 
 type DownloadNowBtnWithArrowProps = {
     color: string;
@@ -43,7 +44,9 @@ function DownloadNowBtnWithArrow ({color} : DownloadNowBtnWithArrowProps) {
 
     return (
         <div style={style.downloadButton} className="download-now-btn-with-arrow" onClick={()=>window.open("https://play.google.com/store/apps/details?id=com.moose_social&hl=id", "_blank")}>
-            <button style={style.downloadText}>Download Now</button>
+            <button aria-label="Download Now" style={style.downloadText} type="button">
+                <AnimatedDownloadText text="Download Now" />
+            </button>
             <button style={style.blackCircle}><MdArrowOutward size={45} className="arrow"/></button>
         </div>
     )

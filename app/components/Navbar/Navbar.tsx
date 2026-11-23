@@ -1,6 +1,7 @@
+
 "use client";
 
-import "./Navbar.css"
+import "./Navbar.css";
 import DownloadBtnBlack from "@/app/components/DownloadBtnBlack";
 import { useEffect, useRef, useState } from "react";
 
@@ -25,7 +26,17 @@ function AnimatedNavText({ text }: { text: string }) {
     );
 }
 
-function Navbar () {
+function BlurLayers() {
+    return (
+        <>
+            {Array.from({ length: 8 }, (_, index) => (
+                <div className="blur-layer" key={index} />
+            ))}
+        </>
+    );
+}
+
+function Navbar() {
     const [isHidden, setIsHidden] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState("home");
@@ -36,11 +47,17 @@ function Navbar () {
 
         const updateActiveSection = () => {
             const sections = Array.from(
-                document.querySelectorAll<HTMLElement>("#home, #about-us, #key-features, #faq")
+                document.querySelectorAll<HTMLElement>(
+                    "#home, #about-us, #key-features, #faq"
+                )
             );
+
             const visibleSections = sections.filter(
-                (section) => section.getBoundingClientRect().top <= window.innerHeight * 0.45
+                (section) =>
+                    section.getBoundingClientRect().top <=
+                    window.innerHeight * 0.45
             );
+
             const currentSection = visibleSections[visibleSections.length - 1];
 
             setActiveSection(currentSection?.id ?? "home");
@@ -49,6 +66,7 @@ function Navbar () {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
             const scrollDifference = currentScrollY - previousScrollY.current;
+
             updateActiveSection();
 
             if (currentScrollY <= 80) {
@@ -67,8 +85,12 @@ function Navbar () {
         };
 
         updateActiveSection();
+
         window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => window.removeEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
 
     useEffect(() => {
@@ -84,27 +106,17 @@ function Navbar () {
     }, [isMenuOpen]);
 
     return (
-        <div className={`navbar-container${isHidden ? " navbar-hidden" : ""}${isMenuOpen ? " menu-open" : ""}`}>
+        <div
+            className={`navbar-container${isHidden ? " navbar-hidden" : ""}${isMenuOpen ? " menu-open" : ""}`}
+        >
+            {/* Progressive Blur */}
             <div className="blur-bg-nav">
-                <div className="background">
-                    <div className="bg bg-1"></div>
-                    <div className="bg bg-2"></div>
-                    <div className="bg bg-3"></div>
-                    <div className="bg bg-4"></div>
-                    <div className="bg bg-5"></div>
-                    <div className="bg bg-6"></div>
-                    <div className="bg bg-7"></div>
-                    <div className="bg bg-8"></div>
+                <div className="blur-section blur-section-top">
+                    <BlurLayers />
                 </div>
-                <div className="background">
-                    <div className="bg bg-1"></div>
-                    <div className="bg bg-2"></div>
-                    <div className="bg bg-3"></div>
-                    <div className="bg bg-4"></div>
-                    <div className="bg bg-5"></div>
-                    <div className="bg bg-6"></div>
-                    <div className="bg bg-7"></div>
-                    <div className="bg bg-8"></div>
+
+                <div className="blur-section blur-section-bottom">
+                    <BlurLayers />
                 </div>
             </div>
 
@@ -116,7 +128,11 @@ function Navbar () {
                 <button
                     type="button"
                     className={`mobile-menu-toggle${isMenuOpen ? " open" : ""}`}
-                    aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+                    aria-label={
+                        isMenuOpen
+                            ? "Close navigation menu"
+                            : "Open navigation menu"
+                    }
                     aria-expanded={isMenuOpen}
                     onClick={() => setIsMenuOpen((open) => !open)}
                 >
@@ -125,37 +141,60 @@ function Navbar () {
                     <span />
                 </button>
 
-                <nav className={`nav-links-bar${isMenuOpen ? " menu-open" : ""}`} aria-label="Main navigation">
-                    <a href="#home" aria-label="Home" onClick={() => setIsMenuOpen(false)} className={`link link-1${activeSection === "home" ? " active" : ""}`}>
-                        <span className={`dot${activeSection === "home" ? " active" : ""}`}>•</span>
+                <nav
+                    className={`nav-links-bar${isMenuOpen ? " menu-open" : ""}`}
+                    aria-label="Main navigation"
+                >
+                    <a
+                        href="#home"
+                        aria-label="Home"
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`link link-1${activeSection === "home" ? " active" : ""}`}
+                    >
+                        <span className={`dot${activeSection === "home" ? " active" : ""}`}>
+                            •
+                        </span>
                         <AnimatedNavText text="Home" />
-                        <div className="nav-link-text-replace">
-                            Home
-                        </div>
+                        <div className="nav-link-text-replace">Home</div>
                     </a>
 
-                    <a href="#about-us" aria-label="About Us" onClick={() => setIsMenuOpen(false)} className={`link link-1${activeSection === "about-us" ? " active" : ""}`}>
-                        <span className={`dot${activeSection === "about-us" ? " active" : ""}`}>•</span>
+                    <a
+                        href="#about-us"
+                        aria-label="About Us"
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`link link-1${activeSection === "about-us" ? " active" : ""}`}
+                    >
+                        <span className={`dot${activeSection === "about-us" ? " active" : ""}`}>
+                            •
+                        </span>
                         <AnimatedNavText text="About Us" />
-                        <div className="nav-link-text-replace">
-                            About Us
-                        </div>
+                        <div className="nav-link-text-replace">About Us</div>
                     </a>
 
-                    <a href="#key-features" aria-label="Key Features" onClick={() => setIsMenuOpen(false)} className={`link link-1${activeSection === "key-features" ? " active" : ""}`}>
-                        <span className={`dot${activeSection === "key-features" ? " active" : ""}`}>•</span>
+                    <a
+                        href="#key-features"
+                        aria-label="Key Features"
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`link link-1${activeSection === "key-features" ? " active" : ""}`}
+                    >
+                        <span className={`dot${activeSection === "key-features" ? " active" : ""}`}>
+                            •
+                        </span>
                         <AnimatedNavText text="Key Features" />
-                        <div className="nav-link-text-replace">
-                            Key Features
-                        </div>
+                        <div className="nav-link-text-replace">Key Features</div>
                     </a>
 
-                    <a href="#faq" aria-label="FAQ" onClick={() => setIsMenuOpen(false)} className={`link link-1${activeSection === "faq" ? " active" : ""}`}>
-                        <span className={`dot${activeSection === "faq" ? " active" : ""}`}>•</span>
+                    <a
+                        href="#faq"
+                        aria-label="FAQ"
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`link link-1${activeSection === "faq" ? " active" : ""}`}
+                    >
+                        <span className={`dot${activeSection === "faq" ? " active" : ""}`}>
+                            •
+                        </span>
                         <AnimatedNavText text="FAQ" />
-                        <div className="nav-link-text-replace">
-                            FAQ
-                        </div>
+                        <div className="nav-link-text-replace">FAQ</div>
                     </a>
 
                     <div className="nav-download-btn-mobile">
@@ -164,11 +203,11 @@ function Navbar () {
                 </nav>
 
                 <div className="nav-download-btn">
-                    <DownloadBtnBlack/>
+                    <DownloadBtnBlack />
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Navbar;
