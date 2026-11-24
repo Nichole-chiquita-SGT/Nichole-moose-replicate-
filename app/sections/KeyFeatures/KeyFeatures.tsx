@@ -2,6 +2,7 @@
 
 import "./KeyFeatures.css"
 import GreenTag from "@/app/components/GreenTag";
+import AnimatedDownloadText from "@/app/components/AnimatedDownloadText";
 
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
@@ -306,8 +307,8 @@ function KeyFeatures () {
                             <div className="title-key-features">
                                 Get the app
                             </div>
-                            <button className="download-now-btn-key-features">
-                                Download Now
+                            <button className="download-now-btn-key-features" aria-label="Download Now">
+                                <AnimatedDownloadText text="Download Now" />
                             </button>
                         </div>
                     </div>

@@ -120,7 +120,8 @@ body {
 }
 
 .download-now-btn:hover .download-button-letter,
-.download-now-btn-with-arrow:hover .download-button-letter {
+.download-now-btn-with-arrow:hover .download-button-letter,
+.download-now-btn-key-features:hover .download-button-letter {
     transform: translateY(-100%);
 }
 

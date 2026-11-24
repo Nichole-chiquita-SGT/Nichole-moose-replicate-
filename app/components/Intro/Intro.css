@@ -26,6 +26,7 @@
     width: fit-content;
     max-width: 90%;
     margin: auto;
+    opacity: 0;
 }
 
 .moose-logo-intro {

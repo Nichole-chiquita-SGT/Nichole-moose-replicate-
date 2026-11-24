@@ -12,13 +12,20 @@ function Intro() {
         const ctx = gsap.context(() => {
             const tl = gsap.timeline();
 
-            tl.from(".intro-content", {
-            }).from(".moose-logo-intro", {
-                x: -100,
+
+            tl.fromTo(".intro-content", {
                 opacity: 0,
-                duration: 1.5,
-                ease: "power3.out",
+            }, {
+                opacity: 1,
+                duration: 0.5,
+                ease: "power2.out",
             })
+                .from(".moose-logo-intro", {
+                    x: -100,
+                    opacity: 0,
+                    duration: 1.5,
+                    ease: "power3.out",
+                })
                 .from(".letter-intro", {
                     opacity: 0,
                     x: -50,
@@ -27,16 +34,17 @@ function Intro() {
                     duration: 0.7,
                     ease: "power3.out",
                 })
-
                 .to(".intro-content", {
                     x: 15,
                     opacity: 0.5,
                     duration: 0.5,
-                }, ).to(".intro-splash-screen-container", {
+                })
+                .to(".intro-splash-screen-container", {
                     clipPath: "inset(0 0 0 100%)",
                     duration: 1.2,
                     ease: "power4.inOut",
                 }, "<");
+
 
         });
 

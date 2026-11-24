@@ -15,9 +15,9 @@ function BenefitsSection() {
     useGSAP(() => {
         const mm = gsap.matchMedia();
 
-        // DESKTOP
+        //desktop
         mm.add("(min-width: 601px)", () => {
-            const cards = gsap.utils.toArray(".benefits-card");
+            const cards = gsap.utils.toArray<HTMLElement>(".benefits-card");
 
             const timeline = gsap.timeline({
                 scrollTrigger: {
@@ -32,8 +32,11 @@ function BenefitsSection() {
                 }
             });
 
+
             cards.forEach((card, index) => {
                 if (index === 0) return;
+
+                const position = index - 1;
 
                 // Card baru naik
                 timeline.fromTo(
@@ -46,41 +49,45 @@ function BenefitsSection() {
                         duration: 1,
                         ease: "none",
                     },
-                    index - 1
+                    position
                 );
 
-                // Card sebelumnya menghilang menjelang tertutup
+                // Card sebelumnya mengecil dan bergeser
                 cards.slice(0, index).forEach((previousCard, previousIndex) => {
 
-                    timeline.to(
-                        previousCard,
-                        {
-                            opacity: 0,
-                            duration: 0.25,
-                            ease: "none",
-                        },
-                        index - 1 + 0.75
-                    );
+                    const distance = index - previousIndex;
 
                     // Efek stacking
                     timeline.to(
                         previousCard,
                         {
-                            scale: 1 - 0.06 * (index - previousIndex),
-                            y: 30 * (index - previousIndex),
-                            ease: "none",
+                            scale: 1 - 0.04 * distance,
+                            y: 20 * distance,
                             duration: 1,
+                            ease: "none",
                         },
-                        index - 1
+                        position
+                    );
+
+                    // Menghilang ketika card baru hampir menutupi
+                    timeline.to(
+                        previousCard,
+                        {
+                            opacity: 0,
+                            duration: 1,
+                            ease: "none",
+                        },
+                        position + 0.5
                     );
 
                 });
             });
+
         });
 
-        // MOBILE
+        // mobile
         mm.add("(max-width: 600px)", () => {
-            const cards = gsap.utils.toArray(".benefits-card");
+            const cards = gsap.utils.toArray<HTMLElement>(".benefits-card");
 
             const timeline = gsap.timeline({
                 scrollTrigger: {
@@ -95,8 +102,11 @@ function BenefitsSection() {
                 }
             });
 
+
             cards.forEach((card, index) => {
                 if (index === 0) return;
+
+                const position = index - 1;
 
                 // Card baru naik
                 timeline.fromTo(
@@ -109,36 +119,40 @@ function BenefitsSection() {
                         duration: 1,
                         ease: "none",
                     },
-                    index - 1
+                    position
                 );
 
-                // Card sebelumnya menghilang menjelang tertutup
+                // Card sebelumnya mengecil dan bergeser
                 cards.slice(0, index).forEach((previousCard, previousIndex) => {
 
-                    timeline.to(
-                        previousCard,
-                        {
-                            opacity: 0,
-                            duration: 0.25,
-                            ease: "none",
-                        },
-                        index - 1 + 0.75
-                    );
+                    const distance = index - previousIndex;
 
                     // Efek stacking
                     timeline.to(
                         previousCard,
                         {
-                            scale: 1 - (0.04 * (index - previousIndex)),
-                            y: 20 * (index - previousIndex),
-                            ease: "none",
+                            scale: 1 - 0.04 * distance,
+                            y: 20 * distance,
                             duration: 1,
+                            ease: "none",
                         },
-                        index - 1
+                        position
+                    );
+
+                    // Menghilang ketika card baru hampir menutupi
+                    timeline.to(
+                        previousCard,
+                        {
+                            opacity: 0,
+                            duration: 1,
+                            ease: "none",
+                        },
+                        position + 0.5
                     );
 
                 });
             });
+
         });
 
         return () => mm.revert();

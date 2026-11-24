@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "./components/SmoothScroll"
+import ResizeReload from "@/app/components/ResizeReload";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${plusJakarta.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <ResizeReload/>
         <SmoothScroll/>
         {children}
       </body>

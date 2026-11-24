@@ -301,6 +301,13 @@
     height: min(5.186vh, 2.917vw);
     width: min(19.63vh, 11.042vw);
     border: none;
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.card-4-key-features .text-container-key-features .download-now-btn-key-features:hover {
+    transform: scale(0.94) !important;
 }
 
 @media (max-width: 600px) {
